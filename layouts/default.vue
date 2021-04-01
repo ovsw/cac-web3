@@ -1,11 +1,16 @@
 <template>
   <div>
     <client-only>
-      <button class="refreshPreview" v-if="$store.state.showDrafPreviewBanner" @click="$nuxt.refresh()">
+      <button
+        class="refreshPreview"
+        v-if="$store.state.showDrafPreviewBanner"
+        @click="$nuxt.refresh()"
+      >
         Draft Preview. Click here to refresh
       </button>
     </client-only>
     <div class="site-wrap">
+      <SiteHeader />
       <Nuxt />
     </div>
   </div>
@@ -13,15 +18,8 @@
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
