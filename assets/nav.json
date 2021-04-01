@@ -206,45 +206,8 @@
     ]
   },
   {
-    "name": "Contact & Info",
+    "name": "Contact",
     "url": "",
-    "children": [
-      {
-        "column": 1,
-        "name": "Info",
-        "children": [
-          {
-            "name": "Dates & Rates",
-            "url": "/dates-and-rates/"
-          },
-          {
-            "name": "FAQs",
-            "url": "/faqs/"
-          },
-          {
-            "name": "Contact Us",
-            "url": "/contact/"
-          }
-        ]
-      },
-      {
-        "column": 2,
-        "name": "Programs",
-        "children": [
-          {
-            "name": "General Program",
-            "url": "/passes/all-day-fun-pass/"
-          },
-          {
-            "name": "Specialty Programs",
-            "url": "/passes/sundowner-fun-pass/"
-          },
-          {
-            "name": "Youth Leadership Program",
-            "url": "/passes/season-pass/"
-          }
-        ]
-      }
-    ]
+    "children": []
   }
 ]
