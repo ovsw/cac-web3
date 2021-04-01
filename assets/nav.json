@@ -1,0 +1,250 @@
+[
+  {
+    "name": "Prospective Families",
+    "url": "",
+    "children": [
+      {
+        "column": 1,
+        "name": "Programs & Facilities",
+        "children": [
+          {
+            "name": "The CAC Experience",
+            "url": "/the-canadian-adventure-camp-experience/"
+          },
+          {
+            "name": "General Program",
+            "url": "/programs/general-camp-program/"
+          },
+          {
+            "name": "Youth Leadership Program",
+            "url": "/all-new-youth-leadership-program/"
+          },
+          {
+            "name": "Health & Safety",
+            "url": "/health-and-safety/"
+          },
+          {
+            "name": "Accommodation & Facilities",
+            "url": "/accommodation-and-facilities/"
+          },
+          {
+            "name": "International Campers",
+            "url": "/international-campers/"
+          }
+        ]
+      },
+      {
+        "column": 2,
+        "name": "Specialty Programs",
+        "children": [
+          {
+            "name": "Overview",
+            "url": "/programs/specialty-summer-camp-programs/"
+          },
+          {
+            "name": "Gymnastics",
+            "url": "/programs/specialty-gymnastics-program/"
+          },
+          {
+            "name": "Trampoline",
+            "url": "/programs/trampoline-specialty-program/"
+          },
+          {
+            "name": "Aerials",
+            "url": "/programs/aerials-specialty-program/"
+          },
+          {
+            "name": "Water Ski & Wakeboard",
+            "url": "/programs/water-ski-and-wake-boarding-specialty-program/"
+          }
+        ]
+      },
+      {
+        "column": 3,
+        "name": "Important Info",
+        "children": [
+          {
+            "name": "Welcome Prospective Families",
+            "url": "/prospective-families/"
+          },
+          {
+            "name": "Dates & Rates",
+            "url": "/dates-and-rates/"
+          },
+          {
+            "name": "Food & Sample Menu",
+            "url": "/food-and-sample-menu/"
+          },
+          {
+            "name": "FAQs",
+            "url": "/faqs/"
+          },
+          {
+            "name": "Testimonials",
+            "url": "/programs/aerials-specialty-program/"
+          },
+          {
+            "name": "Enroll Now",
+            "url": "/programs/water-ski-and-wake-boarding-specialty-program/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "About Us",
+    "url": "",
+    "children": [
+      {
+        "column": 1,
+        "name": "About CAC",
+        "children": [
+          {
+            "name": "History & Goal",
+            "url": "/our-summer-camp-history-and-goal/"
+          },
+          {
+            "name": "Unique Location",
+            "url": "/private-island-camp-location-ontario/"
+          },
+          {
+            "name": "Great Leadership",
+            "url": "/great-leadership/"
+          },
+          {
+            "name": "Memberships & Partnerships",
+            "url": "/memeberships-partnerships/"
+          },
+          {
+            "name": "Alumni",
+            "url": "/alumni/"
+          }
+        ]
+      },
+      {
+        "column": 2,
+        "name": "Media",
+        "children": [
+          {
+            "name": "Photo Gallery",
+            "url": "/photo-gallery/"
+          },
+          {
+            "name": "Videos",
+            "url": "/videos/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Curent Families",
+    "url": "",
+    "children": [
+      {
+        "column": 1,
+        "name": "Parent Info",
+        "children": [
+          {
+            "name": "Youth Leadership Program",
+            "url": "/all-new-youth-leadership-program/"
+          },
+          {
+            "name": "What to bring to camp",
+            "url": "/what-to-bring-to-camp/"
+          },
+          {
+            "name": "Parent's Guide",
+            "url": "/download-parent-guide/"
+          },
+          {
+            "name": "Getting to Camp",
+            "url": "/transportation/"
+          },
+          {
+            "name": "International Travel",
+            "url": "/transportation/international-campers/"
+          }
+        ]
+      },
+      {
+        "column": 2,
+        "name": "Visiting Camp",
+        "children": [
+          {
+            "name": "Stay in touch with your camper",
+            "url": "/stay-in-touch-with-your-camper/"
+          },
+          {
+            "name": "Visitor's Days",
+            "url": "/visitor-days/"
+          },
+          {
+            "name": "Places to Stay",
+            "url": "/places-to-stay-when-visiting/"
+          }
+        ]
+      },
+      {
+        "column": 3,
+        "name": "Season Updates",
+        "children": [
+          {
+            "name": "Camp Pictures",
+            "url": "/camp-pictures/"
+          },
+          {
+            "name": "Camp Video",
+            "url": "/camp-video/"
+          },
+          {
+            "name": "Parent Login",
+            "url": "/parent-log-in/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Contact & Info",
+    "url": "",
+    "children": [
+      {
+        "column": 1,
+        "name": "Info",
+        "children": [
+          {
+            "name": "Dates & Rates",
+            "url": "/dates-and-rates/"
+          },
+          {
+            "name": "FAQs",
+            "url": "/faqs/"
+          },
+          {
+            "name": "Contact Us",
+            "url": "/contact/"
+          }
+        ]
+      },
+      {
+        "column": 2,
+        "name": "Programs",
+        "children": [
+          {
+            "name": "General Program",
+            "url": "/passes/all-day-fun-pass/"
+          },
+          {
+            "name": "Specialty Programs",
+            "url": "/passes/sundowner-fun-pass/"
+          },
+          {
+            "name": "Youth Leadership Program",
+            "url": "/passes/season-pass/"
+          }
+        ]
+      }
+    ]
+  }
+]
