@@ -71,7 +71,7 @@ export default {
     crawler: false,
     async routes() {
       const pages = await client.fetch(`*[_type == "page"]`);
-      const newsItems = await client.fetch(`*[_type == "newsItem"]`);
+      const posts = await client.fetch(`*[_type == "post"]`);
 
       return [
         ...pages.map(page => {
@@ -81,10 +81,10 @@ export default {
             payload: page
           };
         }),
-        ...newsItems.map(page => {
+        ...posts.map(page => {
           // console.log('creting route for: ', `/news/${page.content.slug.current}/`)
           return {
-            route: `/news/${page.content.slug.current}/`,
+            route: `/blog/${page.content.slug.current}/`,
             payload: page
           };
         })
