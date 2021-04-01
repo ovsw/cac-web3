@@ -10,7 +10,7 @@
           <!-- x-data="{ mainMenuisOpen: false }" -->
           <a class="site-head__logo" href="/">
             <img
-              src="/images/logos/canadian-adventure-camp-logo.png"
+              src="~/assets/images/logos/canadian-adventure-camp-logo.png"
               alt="Canadian Adventure Camp Logo"
             />
           </a>
