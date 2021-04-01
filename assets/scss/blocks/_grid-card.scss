@@ -4,11 +4,16 @@
   overflow: hidden;
 
   &__body {
-    padding: get-size('400');
+    padding: get-size('600');
+
+    & ul {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
     font-size: get-size('500');
+    text-transform: uppercase;
   }
 
   &__subtitle{
@@ -33,6 +38,13 @@
 
   &__image {
     cursor: pointer;
+    & img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  &__description {
+    font-size: get-size('400');
   }
 
   &__buttonWrapper a {

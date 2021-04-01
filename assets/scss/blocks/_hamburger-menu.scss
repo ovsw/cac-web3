@@ -17,13 +17,15 @@
   justify-content: center;
   background-color: transparent;
   border: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .hamburger-menu div{
   width: 1.6rem;
   height: 3px;
   border-radius: 3px;
-  background-color: get-color('secondary');
+  background-color: get-color('light');
   position: relative;
   z-index: 1001;
   transition: .5s;
@@ -35,7 +37,7 @@
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: get-color('secondary');
+  background-color: get-color('light');
   border-radius: 3px;
   transition: .5s;
 }

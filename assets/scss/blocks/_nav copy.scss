@@ -1,6 +1,13 @@
-$heading-height: 6.9rem;
+$heading-height: 5.4rem;
 $submenu-bg-color: get-color('light-glare');
 $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
+$main-menu-colors: (
+  '1': get-color('primary'),
+  '2': get-color('accent'),
+  '3': get-color('secondary'),
+  '4': get-color('quaternary'),
+  '5': get-color('accent')
+);
 
 .nav {
   line-height: 1;
@@ -27,7 +34,7 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
   @include media-query('lg') {
     display: flex; 
     border-top: none;
-    padding: get-size('200') 0;
+    padding-top: get-size('400');
     display: block;
     position: static;
     background-color: transparent;
@@ -36,8 +43,6 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
     overflow-x: visible;
     overflow-y: visible;
     transition: none;
-
-    
   }
   
   &__list {
@@ -46,11 +51,8 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
     
     @include media-query('lg') {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-direction: row;
-      border: 1px solid rgba($color: get-color('primary'), $alpha: 0.7);
-      width: auto;
-      margin: 0 auto!important;
     }
 
     > li.nav__item {
@@ -58,17 +60,10 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
       flex: 1;
       position: relative;
       
-      &.no-2 {
-        margin-right: 50px;
-      }
-      &.no-3 {
-        margin-left: 50px;
-      }
-
       @include media-query('lg') {
         border: none;
         display: flex;
-        justify-content: center;     
+        justify-content: center;
       }
 
       > a, > button {
@@ -81,11 +76,10 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
         justify-content: space-between;
         align-items: center;
         position: relative;
-        color: get-color('dark');
+        // color: get-color('dark');
         padding: get-size('300');
         outline-offset: -0.25rem;
-        font-weight: 600;
-        text-transform: uppercase;
+        font-weight: 300;
         
         svg {
           width: 0.5rem;
@@ -94,9 +88,8 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
           transform: translateY(-2px);
         }
 
-        &:hover, &:focus{
-          color: get-color('light')!important;
-          background-color: get-color('primary');
+        &:hover {
+          color: get-color('dark')!important;
         }
         
         @media screen and (min-width: 960px) {
@@ -104,15 +97,13 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
         }
 
         @include media-query('lg') {
-          font-size: get-size('400');
-          padding: 1rem;
-          
+          font-size: 1.1rem;
+          padding: 0;
+          margin: get-size('300');
           width: auto;
           outline-offset: 0.25rem;
-          outline-color: get-color('primary');
-          outline-width: 2px;
           &:hover {
-            transform: scale(1);
+            transform: scale(1.1);
             transition: .1s;
             color: get-color('primary');
           }
@@ -127,8 +118,8 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
               border-right: 20px solid transparent;
               border-bottom: 20px solid get-color('primary');
               position: absolute;
-              top: calc(100% + 5px);
-              left: 0;
+              top: calc(100% + 10px);
+              left: 10px;
             }
           }
         }
@@ -146,10 +137,9 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
     position: relative;
     
     @include media-query('lg') {
-      padding-bottom: get-size('400');
-      padding-top: 0;
+      padding: get-size('700');
       position: absolute;
-      top: calc(120% + 14px);
+      top: 138%;
       left: 0;
       box-shadow: 
       0 2px 4px rgba(get-color('secondary'), 0.05),
@@ -157,19 +147,24 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
       display: flex;
       // width: 43rem;
       border-top: 3px solid get-color('primary');
-      z-index: 990;
+
+     
 
       &.no-3 {
         left: -300px;
       }
       &.no-4 {
         left: auto;
-        right: 20%;
+        right: -170px;
+      }
+      &.no-5 {
+        left: auto;
+        right: 0;
       }
 
       // spacing between columns
       > li + li {
-        // padding-left: get-size('400');
+        padding-left: get-size('800');
       }
     }
 
@@ -207,21 +202,12 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
       text-transform: uppercase;
       font-size: get-size('300');
       padding: get-size('300') get-size('500');
-      
       border-top: $mobileMenuItemBorder;
       
       @include media-query('lg') {
         border-top: none;
-        padding: get-size('300');
-        padding-top: get-size('800');
-        padding-right: get-size('800');
-        border-left: 1px solid rgba($color: get-color('light'), $alpha: 1);
-        color: get-color('light');
-        background-color: get-color("primary-glare");
-        margin-bottom: get-size('200');
-        letter-spacing: 1px;
-        font-weight: normal;
-        white-space: nowrap;
+        padding: 0;
+        padding-bottom: get-size('300');
       }
     }
 
@@ -229,8 +215,6 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
       border-top: $mobileMenuItemBorder;
       @include media-query('lg') {
         border-top: none;
-        padding: 0 1rem;
-        // border-left: 2px solid rgba($color: get-color('primary'), $alpha: 0.3)   
       }
     }
     a {
@@ -247,9 +231,8 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
       font-weight: 400;
 
       @include media-query('lg') {
-        padding: get-size('200') get-size('300');
+        padding: get-size('300') get-size('300');
         white-space: nowrap;
-        padding-left: get-size('200');
       }
     }
   }

@@ -1,4 +1,6 @@
 .menuSection {
+
+  // padding: get-size('xl') 0;
   
   h2 {
     margin-bottom: get-size('900');
@@ -67,6 +69,9 @@
     flex-grow: 0;
     flex-shrink: 0;
     padding-left: get-size('400');
+  }
+  &__dg2goLineWrapper {
+
   }
 }
 

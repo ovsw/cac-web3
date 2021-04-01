@@ -7,12 +7,12 @@
   
 
   @include media-query('md') {
-    padding-top: 22rem;
+    padding-top: 29rem;
   }
 
   &__content {
     display: inline-block;
-    background-color: get-color('light');
+    background-color: get-color('light-shade');
     border-radius: 0 50px 0 0;
     
     padding: get-size('600') get-size('600');
@@ -35,8 +35,8 @@
     }
   }
 
-  
-  background-image: url('/images/bg/Favorite-Shot-of-the-Water-Park.jpg');
+  background-position: center center;
+  background-image: url('https://cdn.sanity.io/images/lwnx6aqb/production/192addb25424b75a86ef70b629971457e081c9a0-1200x794.jpg?fit=crop&w=1600&h=500');
 
 }
 
