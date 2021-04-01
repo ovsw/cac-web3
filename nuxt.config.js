@@ -51,7 +51,11 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/style-resources", "@nuxtjs/sanity"],
+  buildModules: [
+    "@nuxtjs/svg-sprite",
+    "@nuxtjs/style-resources",
+    "@nuxtjs/sanity"
+  ],
 
   styleResources: {
     // your settings here
