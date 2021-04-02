@@ -125,3 +125,22 @@ h2 {
 .cognito:not(.c-forms-actionBar) {
   max-width: 100% !important;
 }
+
+.refreshPreview {
+  position:sticky; 
+  top:0; width: 100%; 
+  text-align: center; 
+  background-color: black; 
+  color: white; 
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+
+  &:hover {
+    background-color: rgb(49, 49, 49);
+    font-weight: bold;
+  }
+}
+.bodyPreviewActive {
+  padding-top: 2rem!important;
+}

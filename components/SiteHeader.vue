@@ -2,7 +2,7 @@
   <div>
     <a class="[ skip-link ] [ button ]" href="#main-content">Skip to content</a>
 
-    <header role="banner" class="[ site-head ]">
+    <header role="banner" :class="[$store.state.showDrafPreviewBanner == true ? 'bodyPreviewActive' : '', 'site-head']">
       <Header-TopBar />
 
       <div class="wrapper">

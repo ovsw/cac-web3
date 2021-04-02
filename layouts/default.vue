@@ -9,7 +9,7 @@
         Draft Preview. Click here to refresh
       </button>
     </client-only>
-    <div class="site-wrap">
+    <div :class="[$store.state.showDrafPreviewBanner == true ? 'bodyPreviewActive' : '', 'site-wrap']">
       <site-header />
       <Nuxt />
       <site-footer />
