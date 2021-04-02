@@ -10,15 +10,16 @@ const configSanity = {
   minimal: true,
   dataset: "production"
   // token: process.env.NODE_ENV == "development" ? process.env.SANITY_READ_TOKEN : ''
+  // withCredentials: process.env.NODE_ENV == "development" ? true : "false"
 };
 const client = createClient(configSanity);
 
 export default {
-  // privateRuntimeConfig: {
-  //   sanity: {
-  //     token: process.env.SANITY_READ_TOKEN,
-  //   },
-  // },
+  privateRuntimeConfig: {
+    sanity: {
+      token: process.env.SANITY_READ_TOKEN
+    }
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
@@ -33,7 +34,14 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300;500;900&display=swap"
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

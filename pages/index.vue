@@ -1,14 +1,6 @@
 <template>
   <div>
-    <h1>{{siteHome.content.hero.title}}</h1>
-      <div v-for="section in siteHome.content.sections" :key="section._key">
-
-          <!-- {{section.title}}
-         {{section._type}} -->
-            
-        <SectionsMagSection v-if="section._type == 'magSection'" v-bind:section="section"/>
-           
-      </div>
+    Homepage
   </div>
 </template>
 

@@ -13,7 +13,7 @@
       <span class="col-title">{{ column.name }}</span>
       <ul class="nav__column-items">
         <li v-for="columnItem in column.children" :key="columnItem.name">
-          <a :href="columnItem.url">{{ columnItem.name }}</a>
+          <NuxtLink :to="columnItem.url" @click.native="closeParentMenu">{{ columnItem.name }}</NuxtLink>
         </li>
       </ul>
     </li>
@@ -23,8 +23,14 @@
 <script>
 export default {
   props: {
-    mainNavItem: Object
-  }
+    mainNavItem: Object,
+    closeSubMenu: Function
+  },
+  methods: {
+    closeParentMenu() {
+      this.$emit('close-subMenu');
+    }
+  },
 };
 </script>
 

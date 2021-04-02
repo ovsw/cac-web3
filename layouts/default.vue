@@ -10,8 +10,9 @@
       </button>
     </client-only>
     <div class="site-wrap">
-      <Header />
+      <site-header />
       <Nuxt />
+      <site-footer />
     </div>
   </div>
 </template>

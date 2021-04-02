@@ -1,3 +1,56 @@
+<<template>
+  <section class="[ ctaSection ]" data-theme-color="green" data-theme="dark">
+    
+    <!-- {% if section.image.asset %}
+      {% responsiveImage section.image, 
+      "500, 1200, 1600", 
+      "(min-width: 40em) 70vw, 100vw",
+      "[ bgImage bgImage--gray bgImage--withOverlay ]",
+      imageAlt
+    %}
+    {% endif %} -->
+    
+    <div class="[ ctaSection__color-overlay ] [ pinned ]"></div>
+    
+    <div class="[ wrapper ]">
+        
+      <div class="[ ctaSection__content ] [ pannel ]">
+        <div class="ctaSection__leftColumn [ flow ]">
+          <h2>{{section.title}}</h2>
+
+          <div v-if="section.subtitle" class="ctaSection__subHeadingWrapper">
+            <h3 class='subtitle'>{{section.subtitle}}</h3>
+          </div>
+
+       
+            <div v-if="section.text" class="ctaSection__rteWrapper [ flow ]">
+              <SanityContent :blocks="section.text" />
+            </div>
+          
+        </div>
+
+        
+        <div v-if="section.buttons" class="ctaSection__rightColumn cluster-l">      
+          <div v-for="button in section.buttons">
+            <a :href="button.url" class="[ button button--outline-light ]">{{button.text}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+  export default {
+    props: {
+      section: {
+        type: Object,
+      },
+    },
+  }
+</script>
+
+<style lang="scss" scoped>
 $sectionColors: (
   'green': get-color('primary'),
   'blue': get-color('secondary'),
@@ -12,7 +65,7 @@ $sectionColors: (
   padding: var(--grid-space) 0;
 
   &__image img {
-    @extend .pinned;
+    // pinned
 
     -webkit-filter: grayscale(100%);
     -moz-filter:    grayscale(100%);
@@ -87,3 +140,4 @@ $sectionColors: (
 .bigHeadingSection + .ctaSection {
   margin-top: 0!important;
 }
+</style>

@@ -4,22 +4,22 @@
       :aria-label="mainNavItem.name + 'sub-menu toggle'"
       :aria-controls="mainNavItem.name + '-submenu'"
       aria-haspopup="true"
-      aria-expanded="false"
+      :aria-expanded="showSubMenu"
       @click="toggleSubMenu"
     >
-      <!-- x-bind:data-state="subMenuIsOpen ? 'active' : ''"
-            @click="subMenuIsOpen = !subMenuIsOpen" -->
       {{ mainNavItem.name }}
     </button>
 
-    <Header-Nav-Item-Dropdown :mainNavItem="mainNavItem" v-show="showSubMenu" />
+    <header-nav-item-dropdown :mainNavItem="mainNavItem" v-show="showSubMenu" @close-subMenu="closeSubMenu"/>
   </li>
 </template>
 
 <script>
 import { mixin as onClickOutside } from "vue-on-click-outside";
+import HeaderNavItemDropdown from './Header-Nav-Item-Dropdown.vue';
 
 export default {
+  components: { HeaderNavItemDropdown },
   props: {
     mainNavItem: Object
   },

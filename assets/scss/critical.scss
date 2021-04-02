@@ -11,12 +11,14 @@ body {
   color: get-color("dark");
   line-height: 1.5;
   font-size: get-size("500");
-  padding-top: 85px;
 
   @include apply-utility("font", "base");
+}
 
+.site-wrap {
+  padding-top: 85px;
   @include media-query("lg") {
-    padding-top: 5.9375rem;
+    padding-top: 6.6875rem;
   }
 }
 
@@ -84,14 +86,11 @@ h2 {
 @import "blocks/button";
 @import "blocks/card";
 @import "blocks/card-section";
-@import "blocks/cta-section";
 @import "blocks/definition-group";
 @import "blocks/hamburger-menu";
 @import "blocks/large-section";
 @import "blocks/links";
-@import "blocks/mag-section";
 @import "blocks/nav";
-@import "blocks/site-footer";
 @import "blocks/site-head";
 @import "blocks/skip-link";
 @import "blocks/status-bar";
