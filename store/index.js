@@ -27,8 +27,16 @@ export const actions = {
     const pagesSlugs = await $sanity
       .fetch('*[_type == "page"].content.slug.current')
       .catch((e) => console.error(e))
-      
     //console.log('pagesSlugs')
     commit('setPagesSlugs', pagesSlugs)
+
+    const pagesSimpleSlugs = await $sanity
+      .fetch('*[_type == "pageSimple"].content.slug.current')
+      .catch((e) => console.error(e))
+    //console.log('pagesSlugs')
+
+    const allPageSlugs = [...pagesSlugs, ...pagesSimpleSlugs]
+
+    commit('setPagesSlugs', allPageSlugs)
   },
 }

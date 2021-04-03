@@ -84,6 +84,7 @@ export default {
     async routes() {
       const pages = await client.fetch(`*[_type == "page"]`);
       const posts = await client.fetch(`*[_type == "post"]`);
+      const pagesSimple = await client.fetch(`*[_type == "pageSimple"]`);
 
       return [
         ...pages.map(page => {
@@ -97,6 +98,13 @@ export default {
           // console.log('creting route for: ', `/news/${page.content.slug.current}/`)
           return {
             route: `/blog/${page.content.slug.current}/`,
+            payload: page
+          };
+        }),
+        ...pagesSimple.map(page => {
+          // console.log('creting route for: ', `/${page.content.slug.current}/`)
+          return {
+            route: `/${page.content.slug.current}/`,
             payload: page
           };
         })
