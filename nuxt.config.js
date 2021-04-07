@@ -60,10 +60,27 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    "@nuxtjs/google-fonts",
     "@nuxtjs/svg-sprite",
     "@nuxtjs/style-resources",
     "@nuxtjs/sanity"
   ],
+
+  googleFonts: {
+    display: 'swap',
+    download: true,
+    overwriting: false,
+    families: {
+      'Open+Sans': {
+        wght: [400, 600],
+        ital: [400]
+      },
+      Raleway: {
+        wght: [100, 400],
+        ital: [100]
+      },
+    }
+  },
 
   styleResources: {
     // your settings here
