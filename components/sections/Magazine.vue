@@ -45,7 +45,7 @@
             description: section.title
           }"
         >
-          <template v-slot:silentbox-item="{ silentboxItem }">
+          <template v-slot:silentbox-item="{}">
             <span class="w-full h-full block">
               <svg-icon
                 name="icon-play"
