@@ -35,13 +35,17 @@ export default {
       { hid: "description", name: "description", content: "" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300;500;900&display=swap"
-      }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      // {
+      //   rel: "stylesheet",
+      //   href:
+      //     "https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300;500;900&display=swap"
+      // }
     ]
+  },
+
+  tailwindcss: {
+    jit: true
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -52,7 +56,8 @@ export default {
     "~plugins/sanity.js",
     "~plugins/preview.client.js",
     "~plugins/image-builder.js",
-    "~/plugins/to-link.js"
+    "~/plugins/to-link.js",
+    "~/plugins/lightbox.client.js"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -60,6 +65,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@nuxtjs/svg-sprite",
     "@nuxtjs/style-resources",
@@ -67,18 +73,17 @@ export default {
   ],
 
   googleFonts: {
-    display: 'swap',
+    display: "swap",
     download: true,
-    overwriting: false,
+    overwriting: true,
     families: {
-      'Open+Sans': {
+      "Open+Sans": {
         wght: [400, 600],
         ital: [400]
       },
       Raleway: {
-        wght: [100, 400],
-        ital: [100]
-      },
+        wght: [900]
+      }
     }
   },
 

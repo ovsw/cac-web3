@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body text-dark text-lg;
+  }
+
+  h1,
+  h2 {
+    @apply text-4xl font-extrabold uppercase font-display;
+  }
+
+  /* .magSection + .magSection {
+    flex-direction: row-reverse!important;
+  } */
+  .magSection:nth-child(even) {
+    flex-direction: row-reverse !important;
+  }
+  .magSection:nth-child(even) .magSection__content {
+    @apply md:ml-0 md:mr-grd;
+  }
+}

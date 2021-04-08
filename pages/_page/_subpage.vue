@@ -1,17 +1,28 @@
 <template>
   <article>
-    
     <page-header
       :title="page.content.title"
       :image="page.content.headerImage"
     />
 
     <template v-for="(section, index) in page.content.sections">
-      <sections-magazine-section v-if="section._type == 'magSection'" :key="section._key" :section="section" />
-      <sections-cta-section v-else-if="section._type == 'ctaSection'" :key="section._key" :section="section" />
-      <sections-faq-section v-else-if="section._type == 'faqSection'" :key="section._key" :section="section" :sectionIndex="index"/>
+      <SectionsMagazine
+        v-if="section._type == 'magSection'"
+        :key="section._key"
+        :section="section"
+      />
+      <sections-cta-section
+        v-else-if="section._type == 'ctaSection'"
+        :key="section._key"
+        :section="section"
+      />
+      <sections-faq-section
+        v-else-if="section._type == 'faqSection'"
+        :key="section._key"
+        :section="section"
+        :sectionIndex="index"
+      />
     </template>
-
   </article>
 </template>
 

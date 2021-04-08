@@ -127,11 +127,12 @@ h2 {
 }
 
 .refreshPreview {
-  position:sticky; 
-  top:0; width: 100%; 
-  text-align: center; 
-  background-color: black; 
-  color: white; 
+  position: sticky;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
   border: none;
   cursor: pointer;
   z-index: 1000;
@@ -142,5 +143,5 @@ h2 {
   }
 }
 .bodyPreviewActive {
-  padding-top: 2rem!important;
+  padding-top: 2rem !important;
 }
