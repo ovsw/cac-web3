@@ -18,9 +18,9 @@ module.exports = {
       transparent: "transparent",
       current: "currentColor",
       green: {
-        light: "#3EB084",
-        DEFAULT: "#2D8262",
-        dark: "#006E44"
+        light: "#5d803b",
+        DEFAULT: "#527033",
+        dark: "#3c5423"
       },
       red: {
         light: "#FF6E6E",
@@ -63,7 +63,8 @@ module.exports = {
       },
       spacing: {
         grd: "0.9375rem",
-        "grd-half": "0.4688rem"
+        "grd-half": "0.4688rem",
+        "160": "40rem"
       },
       borderWidth: {
         "5": "6px"

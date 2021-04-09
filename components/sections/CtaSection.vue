@@ -109,7 +109,10 @@ $sectionColors: (
     }
 
     h2,h3 {
-      font-size: 3rem;
+      font-size: get-size('700');
+      @include media-query('md') {
+      font-size: get-size('800');
+      }
     }
 
     .subtitle{

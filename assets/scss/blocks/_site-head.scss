@@ -40,7 +40,7 @@
       }
 
       & svg {
-        display: inline;
+        // display: inline;
       }
     }
 
@@ -60,37 +60,5 @@
     // a {
     //   color: #fff;
     // }
-  }
-}
-
-.alert {
-  background-color: get-color("primary-shade");
-  text-align: center;
-  padding: get-size("200");
-  color: #ffe000;
-  position: relative;
-  z-index: 100;
-
-  & p {
-    display: inline-block;
-
-    & a {
-      text-decoration-color: #ffe000;
-      &:focus {
-        outline-color: white;
-      }
-    }
-  }
-
-  & button {
-    margin-left: auto;
-    background-color: get-color("primary");
-    border: none;
-    color: get-color("light");
-    display: inline-block;
-    margin-left: get-size("400");
-    &:focus {
-      outline-color: white;
-    }
   }
 }

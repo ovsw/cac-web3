@@ -165,6 +165,7 @@ export default {};
 
   &__logos {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
     & img:first-child {

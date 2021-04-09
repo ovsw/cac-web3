@@ -1,56 +1,32 @@
 <template>
   <header
     role="banner"
+    class="site-head shadow"
     :class="[
-      $store.state.showDrafPreviewBanner == true ? 'bodyPreviewActive' : '',
-      'site-head'
+      $store.state.showDrafPreviewBanner == true ? 'bodyPreviewActive' : ''
     ]"
   >
     <Header-TopBar />
 
-    <div class="wrapper">
-      <div class="site-head__inner">
+    <!-- .wrapper -->
+    <div class="">
+      <div class="site-head__inner flex md:block">
         <!-- x-data="{ mainMenuisOpen: false }" -->
-        <a class="site-head__logo" href="/">
+        <a class="logo md:absolute flex md:block items-center" href="/">
           <img
+            class="hidden md:block"
             src="~/assets/images/logos/canadian-adventure-camp-logo.png"
             alt="Canadian Adventure Camp Logo"
           />
+          <span class="md:hidden text-base sm:text-lg pl-4">
+            Canadian Adventure Camp
+          </span>
         </a>
 
         <Header-Nav />
-
-        <!-- mobile menu toggle -->
-        <div class="hamburger-menu__container">
-          <button
-            aria-controls="nav-list"
-            aria-label="Main Menu toggle"
-            class="hamburger-menu"
-          >
-            <!-- :aria-expanded="mainMenuisOpen" -->
-            <!-- @click.prevent="mainMenuisOpen = !mainMenuisOpen"
-              x-bind:data-open="mainMenuisOpen" -->
-            <div></div>
-          </button>
-        </div>
-        <!-- end mobile menu toggle -->
       </div>
     </div>
-    <div
-      class="alert text-400"
-      x-data="{ alertvisible: true }"
-      x-show.transition="alertvisible"
-    >
-      <div class="wrapper">
-        <div class="alert__inner">
-          <p>
-            <a href="#">Alert Text Here - Read our latest COVID Updates</a>
-          </p>
-          <button>Dismiss</button>
-          <!--  @click="alertvisible = false" -->
-        </div>
-      </div>
-    </div>
+    <!-- <HeaderAlert /> -->
   </header>
 </template>
 
@@ -60,4 +36,22 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.logo {
+  top: -2.3rem;
+  left: 50%;
+
+  z-index: 500;
+  & img {
+    width: 90px;
+    @include media-query('md') {
+      width: 180px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    transform: translateX(-100px);
+  }
+}
+</style>

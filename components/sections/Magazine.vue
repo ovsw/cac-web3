@@ -3,17 +3,17 @@
     class="[ magSection ] 
     wrapper 
     my-grd
-    md:flex
+    lg:flex
     "
     data-theme="frame"
     data-theme-color="green"
   >
-    <div class="[ magSection__image ] relative ">
+    <div class="[ magSection__image ] relative">
       <img
         class="object-cover w-full h-full"
         :src="
           $urlFor(section.image)
-            .width(700)
+            .width(300)
             .height(300)
         "
         :alt="section.image.alt"
@@ -29,11 +29,19 @@
             $urlFor(section.image)
               .width(200)
               .height(500) +
-            ' 1000w, ' +
+            ' 200w, ' +
             $urlFor(section.image)
               .width(928)
               .height(500) +
-            ' 1200w, '
+            ' 928w, ' +
+            $urlFor(section.image)
+              .width(1600)
+              .height(1000) +
+            ' 1600w, '
+        "
+        sizes="
+          (min-width: 1500px) 860px,
+          100vw
         "
       />
 
@@ -65,15 +73,15 @@
     <div
       class="[ magSection__content ] 
         flex-auto 
-        md:max-w-2xl
+        lg:max-w-2xl
 
         my-grd
-        md:my-0 md:ml-grd
+        lg:my-0 lg:ml-grd
       
-        p-10 md:p-20
+        p-6 md:p-10 lg:p-20
         space-y-6
 
-        border-5 border-green"
+        border-2 md:border-5 border-green"
     >
       <div class="flow">
         <h2>{{ section.title }}</h2>
@@ -86,7 +94,7 @@
           <SanityContent
             :blocks="section.text"
             :serializers="serializers"
-            class="flow"
+            class="prose"
           />
         </div>
       </div>

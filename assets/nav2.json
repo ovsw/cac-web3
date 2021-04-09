@@ -1,0 +1,296 @@
+[
+  {
+    "name": "Prospective Families",
+    "megaMenu": [
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "The CAC Experience",
+            "description": "what sets us apart",
+            "new": false,
+            "url": "/canadian-adventure-camp-experience/",
+            "icon": "icon-exclamation-light"
+          },
+          {
+            "name": "Dates & Rates",
+            "description": "for 2021",
+            "new": true,
+            "url": "/dates-and-rates/",
+            "icon": "icon-calendar-alt-light"
+          },
+          {
+            "name": "Health & safety",
+            "description": "keeping campers safe",
+            "new": false,
+            "url": "/health-and-safety/",
+            "icon": "icon-star-of-life-light"
+          },
+          {
+            "name": "Accommodations",
+            "description": "and facilities",
+            "new": false,
+            "url": "/accommodation-and-facilities/",
+            "icon": "icon-house-light"
+          },
+          {
+            "name": "International Campers",
+            "description": "welcome!",
+            "new": false,
+            "url": "/international-campers/",
+            "icon": "icon-globe-americas-light"
+          },
+          {
+            "name": "Testimonials",
+            "description": "from our families",
+            "new": false,
+            "url": "/testimoanials/",
+            "icon": "icon-comments-light"
+          }
+        ]
+      },
+      {
+        "type": "bottomSection",
+        "items": [
+          {
+            "name": "General Program",
+            "description": "",
+            "subitems": [],
+            "new": false,
+            "url": "/programs/general-camp-program/",
+            "icon": "icon-heart-light"
+          },
+          {
+            "name": "Youth Leadership Program",
+            "description": "",
+            "subitems": [],
+            "new": true,
+            "url": "",
+            "icon": "icon-graduation-cap-light"
+          },
+          {
+            "name": "Specialty Programs",
+            "description": "",
+            "subitems": [
+              {
+                "name": "Gymnastics",
+                "url": "/programs/specialty-gymnastics-program/"
+              },
+              {
+                "name": "Trampoline",
+                "url": "/programs/trampoline-specialty-program/"
+              },
+              {
+                "name": "Aerials",
+                "url": "/programs/aerials-specialty-program/"
+              },
+              {
+                "name": "Water Ski",
+                "url": "/programs/water-ski-and-wake-boarding-specialty-program/"
+              }
+            ],
+            "new": false,
+            "url": "",
+            "icon": "icon-star-light"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "About Us",
+    "megaMenu": [
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "The CAC Experience",
+            "description": "what sets us apart",
+            "new": false,
+            "url": "/canadian-adventure-camp-experience/",
+            "icon": "icon-exclamation-light"
+          },
+          {
+            "name": "Dates & Rates",
+            "description": "for 2021",
+            "new": true,
+            "url": "/dates-and-rates/",
+            "icon": "icon-calendar-alt-light"
+          },
+          {
+            "name": "Health & safety",
+            "description": "keeping campers safe",
+            "new": false,
+            "url": "/health-and-safety/",
+            "icon": "icon-star-of-life-light"
+          },
+          {
+            "name": "Accommodations",
+            "description": "and facilities",
+            "new": false,
+            "url": "/accommodation-and-facilities/",
+            "icon": "icon-house-light"
+          },
+          {
+            "name": "International Campers",
+            "description": "welcome!",
+            "new": false,
+            "url": "/international-campers/",
+            "icon": "icon-globe-americas-light"
+          },
+          {
+            "name": "Testimonials",
+            "description": "from our families",
+            "new": false,
+            "url": "/testimoanials/",
+            "icon": "icon-comments-light"
+          }
+        ]
+      },
+      {
+        "type": "bottomSection",
+        "items": [
+          {
+            "name": "General Program",
+            "description": "",
+            "subitems": [],
+            "new": false,
+            "url": "/programs/general-camp-program/",
+            "icon": "icon-heart-light"
+          },
+          {
+            "name": "Youth Leadership Program",
+            "description": "",
+            "subitems": [],
+            "new": true,
+            "url": "",
+            "icon": "icon-graduation-cap-light"
+          },
+          {
+            "name": "Specialty Programs",
+            "description": "",
+            "subitems": [
+              {
+                "name": "Gymnastics",
+                "url": "/programs/specialty-gymnastics-program/"
+              },
+              {
+                "name": "Trampoline",
+                "url": "/programs/trampoline-specialty-program/"
+              },
+              {
+                "name": "Aerials",
+                "url": "/programs/aerials-specialty-program/"
+              },
+              {
+                "name": "Water Ski",
+                "url": "/programs/water-ski-and-wake-boarding-specialty-program/"
+              }
+            ],
+            "new": false,
+            "url": "",
+            "icon": "icon-star-light"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Current Families",
+    "megaMenu": [
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "The CAC Experience",
+            "description": "what sets us apart",
+            "new": false,
+            "url": "/canadian-adventure-camp-experience/",
+            "icon": "icon-exclamation-light"
+          },
+          {
+            "name": "Dates & Rates",
+            "description": "for 2021",
+            "new": true,
+            "url": "/dates-and-rates/",
+            "icon": "icon-calendar-alt-light"
+          },
+          {
+            "name": "Health & safety",
+            "description": "keeping campers safe",
+            "new": false,
+            "url": "/health-and-safety/",
+            "icon": "icon-star-of-life-light"
+          },
+          {
+            "name": "Accommodations",
+            "description": "and facilities",
+            "new": false,
+            "url": "/accommodation-and-facilities/",
+            "icon": "icon-house-light"
+          },
+          {
+            "name": "International Campers",
+            "description": "welcome!",
+            "new": false,
+            "url": "/international-campers/",
+            "icon": "icon-globe-americas-light"
+          },
+          {
+            "name": "Testimonials",
+            "description": "from our families",
+            "new": false,
+            "url": "/testimoanials/",
+            "icon": "icon-comments-light"
+          }
+        ]
+      },
+      {
+        "type": "bottomSection",
+        "items": [
+          {
+            "name": "General Program",
+            "description": "",
+            "subitems": [],
+            "new": false,
+            "url": "/programs/general-camp-program/",
+            "icon": "icon-heart-light"
+          },
+          {
+            "name": "Youth Leadership Program",
+            "description": "",
+            "subitems": [],
+            "new": true,
+            "url": "",
+            "icon": "icon-graduation-cap-light"
+          },
+          {
+            "name": "Specialty Programs",
+            "description": "",
+            "subitems": [
+              {
+                "name": "Gymnastics",
+                "url": "/programs/specialty-gymnastics-program/"
+              },
+              {
+                "name": "Trampoline",
+                "url": "/programs/trampoline-specialty-program/"
+              },
+              {
+                "name": "Aerials",
+                "url": "/programs/aerials-specialty-program/"
+              },
+              {
+                "name": "Water Ski",
+                "url": "/programs/water-ski-and-wake-boarding-specialty-program/"
+              }
+            ],
+            "new": false,
+            "url": "",
+            "icon": "icon-star-light"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -4,12 +4,12 @@
 
 @layer base {
   body {
-    @apply font-body text-dark text-lg;
+    @apply font-body text-dark text-base;
   }
 
   h1,
   h2 {
-    @apply text-4xl font-extrabold uppercase font-display;
+    @apply text-2xl lg:text-4xl font-extrabold uppercase font-display;
   }
 
   /* .magSection + .magSection {
