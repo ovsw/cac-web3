@@ -104,59 +104,67 @@
         "type": "columnsSection",
         "items": [
           {
-            "name": "The CAC Experience",
-            "description": "what sets us apart",
+            "name": "History & Goal",
+            "description": "Established in 1975",
             "new": false,
-            "url": "/canadian-adventure-camp-experience/",
-            "icon": "icon-exclamation-light"
+            "url": "/our-summer-camp-history-and-goal/",
+            "icon": "icon-book-heart-light"
           },
           {
-            "name": "Dates & Rates",
-            "description": "for 2021",
-            "new": true,
-            "url": "/dates-and-rates/",
-            "icon": "icon-calendar-alt-light"
+            "name": "Unique Location",
+            "description": "welcome to Adventure Island!",
+            "new": false,
+            "url": "/private-island-camp-location-ontario/",
+            "icon": "icon-leaf-maple-light"
           },
           {
-            "name": "Health & safety",
-            "description": "keeping campers safe",
+            "name": "Great Leadership",
+            "description": "asdasd",
             "new": false,
-            "url": "/health-and-safety/",
-            "icon": "icon-star-of-life-light"
+            "url": "/great-leadership/",
+            "icon": "icon-users-light"
           },
           {
-            "name": "Accommodations",
-            "description": "and facilities",
+            "name": "Memberships",
+            "description": "& Partnerships",
             "new": false,
-            "url": "/accommodation-and-facilities/",
-            "icon": "icon-house-light"
+            "url": "/memeberships-partnerships/",
+            "icon": "icon-handshake-light"
           },
           {
-            "name": "International Campers",
-            "description": "welcome!",
+            "name": "Alumni",
+            "description": "life-long memories",
             "new": false,
-            "url": "/international-campers/",
-            "icon": "icon-globe-americas-light"
+            "url": "/alumni/",
+            "icon": "icon-graduation-cap-light"
           },
           {
-            "name": "Testimonials",
-            "description": "from our families",
+            "name": "Photos & Videos",
+            "description": "take a look around",
             "new": false,
-            "url": "/testimoanials/",
-            "icon": "icon-comments-light"
+            "url": "/photo-gallery/",
+            "icon": "icon-camera-retro-light"
           }
         ]
       },
       {
-        "type": "bottomSection",
+        "type": "columnsSection",
         "items": [
           {
             "name": "General Program",
-            "description": "",
+            "description": "fun for everyone",
             "subitems": [],
             "new": false,
             "url": "/programs/general-camp-program/",
             "icon": "icon-heart-light"
+          },
+          {
+            "name": "Y.L.P.",
+            "description": "Youth Leadership Program",
+            "subitems": [],
+            "new": true,
+            "url": "/all-new-youth-leadership-program/",
+            "icon": "icon-graduation-cap-light"
           },
           {
             "name": "Specialty Programs",
@@ -180,16 +188,8 @@
               }
             ],
             "new": false,
-            "url": "",
+            "url": "/programs/specialty-summer-camp-programs/",
             "icon": "icon-star-light"
-          },
-          {
-            "name": "Youth Leadership Program",
-            "description": "",
-            "subitems": [],
-            "new": true,
-            "url": "",
-            "icon": "icon-graduation-cap-light"
           }
         ]
       }
@@ -202,11 +202,18 @@
         "type": "columnsSection",
         "items": [
           {
-            "name": "The CAC Experience",
-            "description": "what sets us apart",
+            "name": "Parent's Guide",
+            "description": "one-stop resource",
             "new": false,
-            "url": "/canadian-adventure-camp-experience/",
-            "icon": "icon-exclamation-light"
+            "url": "/download-parent-guide/",
+            "icon": "icon-clipboard-list-check-light"
+          },
+          {
+            "name": "FAQs",
+            "description": "Frequent Questions",
+            "new": false,
+            "url": "/faqs/",
+            "icon": "icon-question"
           },
           {
             "name": "Dates & Rates",
@@ -216,77 +223,67 @@
             "icon": "icon-calendar-alt-light"
           },
           {
-            "name": "Health & safety",
-            "description": "keeping campers safe",
-            "new": false,
-            "url": "/health-and-safety/",
-            "icon": "icon-star-of-life-light"
+            "name": "Y.L.P.",
+            "description": "Youth Leadership Programming",
+            "new": true,
+            "url": "/all-new-youth-leadership-program/",
+            "icon": "icon-graduation-cap-light"
           },
           {
-            "name": "Accommodations",
-            "description": "and facilities",
+            "name": "Getting to Camp",
+            "description": "bus & car",
             "new": false,
-            "url": "/accommodation-and-facilities/",
-            "icon": "icon-house-light"
+            "url": "/transportation/",
+            "icon": "icon-map-signs-light"
           },
           {
-            "name": "International Campers",
-            "description": "welcome!",
+            "name": "International Travel",
+            "description": "to camp",
             "new": false,
-            "url": "/international-campers/",
+            "url": "/transportation/international-campers/",
             "icon": "icon-globe-americas-light"
           },
           {
-            "name": "Testimonials",
-            "description": "from our families",
+            "name": "Stay in touch",
+            "description": "with your camper(s)",
             "new": false,
-            "url": "/testimoanials/",
-            "icon": "icon-comments-light"
+            "url": "/stay-in-touch-with-your-camper/",
+            "icon": "icon-envelope-light"
+          },
+          {
+            "name": "Visitor's Days",
+            "description": "and places to stay",
+            "new": false,
+            "url": "/visitor-days/",
+            "icon": "icon-door-open-light"
           }
         ]
       },
       {
-        "type": "bottomSection",
+        "type": "columnsSection",
         "items": [
           {
-            "name": "General Program",
-            "description": "",
+            "name": "Camp Season Pictures",
+            "description": "daily photos from camp",
             "subitems": [],
             "new": false,
-            "url": "/programs/general-camp-program/",
+            "url": "/camp-pictures/",
             "icon": "icon-heart-light"
           },
           {
-            "name": "Specialty Programs",
-            "description": "",
-            "subitems": [
-              {
-                "name": "Gymnastics",
-                "url": "/programs/specialty-gymnastics-program/"
-              },
-              {
-                "name": "Trampoline",
-                "url": "/programs/trampoline-specialty-program/"
-              },
-              {
-                "name": "Aerials",
-                "url": "/programs/aerials-specialty-program/"
-              },
-              {
-                "name": "Water Ski",
-                "url": "/programs/water-ski-and-wake-boarding-specialty-program/"
-              }
-            ],
+            "name": "Camp Season Videos",
+            "description": "weekly uploads",
+            "subitems": [],
             "new": false,
-            "url": "",
-            "icon": "icon-star-light"
+            "url": "/camp-video/",
+            "icon": "icon-film-light"
           },
           {
-            "name": "Youth Leadership Program",
+            "name": "Parent Login",
             "description": "",
             "subitems": [],
-            "new": true,
-            "url": "",
+            "new": false,
+            "url": "/parent-log-in/",
             "icon": "icon-graduation-cap-light"
           }
         ]
