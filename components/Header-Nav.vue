@@ -28,12 +28,12 @@
       :class="menuOpen ? 'block' : 'hidden'"
     >
      <div class="md:flex md:justify-end  md:mr-40">
-      <li class="nav__item "><HeaderMegamenu :menuData="nav[0]" menuIndex="1" /></li>
-      <li class="nav__item"><HeaderMegamenu :menuData="nav[1]" menuIndex="2" /></li>
+      <li class="nav__item "><HeaderMegamenu :menuData="nav[0]" :menuIndex="1" /></li>
+      <li class="nav__item"><HeaderMegamenu :menuData="nav[1]" :menuIndex="2" /></li>
      </div>
 
      <div class="md:flex md:justify-start ">
-      <li class="nav__item "><HeaderMegamenu :menuData="nav[2]" menuIndex="3" /></li>
+      <li class="nav__item "><HeaderMegamenu :menuData="nav[2]" :menuIndex="3" /></li>
       <li class="nav__item md:mr-8">
         <NuxtLink to="/programs/general-camp-program/" class="block text-base focus:outline-none md:p-4 focus:bg-green focus:text-light-light font-bold uppercase">Contact Us</NuxtLink>
       </li>

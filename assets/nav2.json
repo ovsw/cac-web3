@@ -50,22 +50,22 @@
         ]
       },
       {
-        "type": "bottomSection",
+        "type": "columnsSection",
         "items": [
           {
             "name": "General Program",
-            "description": "",
+            "description": "fun for everyone",
             "subitems": [],
             "new": false,
             "url": "/programs/general-camp-program/",
             "icon": "icon-heart-light"
           },
           {
-            "name": "Youth Leadership Program",
-            "description": "",
+            "name": "Y.L.P.",
+            "description": "Youth Leadership Program",
             "subitems": [],
             "new": true,
-            "url": "",
+            "url": "/all-new-youth-leadership-program/",
             "icon": "icon-graduation-cap-light"
           },
           {
@@ -90,7 +90,7 @@
               }
             ],
             "new": false,
-            "url": "",
+            "url": "/programs/specialty-summer-camp-programs/",
             "icon": "icon-star-light"
           }
         ]
@@ -159,14 +159,6 @@
             "icon": "icon-heart-light"
           },
           {
-            "name": "Youth Leadership Program",
-            "description": "",
-            "subitems": [],
-            "new": true,
-            "url": "",
-            "icon": "icon-graduation-cap-light"
-          },
-          {
             "name": "Specialty Programs",
             "description": "",
             "subitems": [
@@ -190,6 +182,14 @@
             "new": false,
             "url": "",
             "icon": "icon-star-light"
+          },
+          {
+            "name": "Youth Leadership Program",
+            "description": "",
+            "subitems": [],
+            "new": true,
+            "url": "",
+            "icon": "icon-graduation-cap-light"
           }
         ]
       }
@@ -257,14 +257,6 @@
             "icon": "icon-heart-light"
           },
           {
-            "name": "Youth Leadership Program",
-            "description": "",
-            "subitems": [],
-            "new": true,
-            "url": "",
-            "icon": "icon-graduation-cap-light"
-          },
-          {
             "name": "Specialty Programs",
             "description": "",
             "subitems": [
@@ -288,6 +280,14 @@
             "new": false,
             "url": "",
             "icon": "icon-star-light"
+          },
+          {
+            "name": "Youth Leadership Program",
+            "description": "",
+            "subitems": [],
+            "new": true,
+            "url": "",
+            "icon": "icon-graduation-cap-light"
           }
         ]
       }

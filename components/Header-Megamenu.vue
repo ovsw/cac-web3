@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:relative">
+  <div class="lg:relative" v-on-click-outside="hideMenu">
     <!-- @mouseover="showMenu" @mouseleave="hideMenu" -->
     <button
       class=" text-base focus:outline-none md:p-4 focus:bg-green focus:text-light-light font-bold uppercase"
@@ -25,28 +25,32 @@
         
         lg:w-160 lg:z-10 lg:-left-8 xl:-left-16 left-
         "
-        :class="{'lg:-left-80' : thirdItem}"
-        >
+        :class="{ 'lg:-left-80': thirdItem }"
+      >
         <!-- megamenu components -->
         <template v-for="(block, index) in menuData.megaMenu">
           <ul
             v-if="block.type == 'columnsSection'"
-            :key="index"
-            class="flex flex-col md:flex-row md:flex-wrap  border-b pl-2 py-4 lg:pl-6 lg:py-6 "
+            :key="block.url"
+            class="flex flex-col md:flex-row md:flex-wrap  border-b pl-2 py-4 lg:px-6 lg:py-6 "
           >
             <li
-              v-for="item in block.items"
-              :key="item.url"
+              v-for="(item, index) in block.items"
+              :key="index"
               class="
               w-full md:w-1/2 
               flex-shrink-0
               p-2 
               text-base md:text-lg
               "
+              :class="[
+                item.subitems && item.subitems.length > 0 ? 'md:w-full' : ''
+              ]"
             >
               <NuxtLink
                 :to="item.url"
                 class="flex group"
+                @click.native="hideMenu"
                 @keydown.esc.exact="hideMenu"
                 @keydown.tab.exact="focusNext(false)"
                 @keydown.down.exact.prevent="focusNext(true)"
@@ -76,32 +80,45 @@
                   >
                 </span>
               </NuxtLink>
+              <!-- extra links start -->
+              <span
+                v-if="item.subitems && item.subitems.length > 0"
+                class="block mt-2 ml-12 md:ml-8  text-sm text-gray-600 group-hover:text-yellow uppercase font-bold tracking-widest space-y-2 "
+              >
+                <span
+                  v-for="(subitem, index) in item.subitems"
+                  :key="index"
+                  class="block lg:inline"
+                >
+                  <span v-if="index != 0" class="hidden lg:inline">, </span
+                  ><NuxtLink :to="subitem.url" class="underline">{{
+                    subitem.name
+                  }}</NuxtLink>
+                </span>
+              </span>
+              <!-- end extra links -->
             </li>
           </ul>
           <ul
             v-else-if="block.type == 'bottomSection'"
             :key="index"
-            class="bg-gray-100 px-8 py-8"
+            class="bg-gray-100 px-8 py-8 space-y-4 bg-green"
           >
-            <li v-for="item in block.items" :key="item.url" class="mb-6 text-base lg:text-lg">
-              <NuxtLink
-                :to="item.url"
-                class="flex lg:items-center group"
-                @keydown.esc.exact="hideMenu"
-                @keydown.tab.exact="focusNext(false)"
-                @keydown.shift.tab="focusPrevious(false)"
-                @keydown.up.exact.prevent="focusPrevious(true)"
-                @keydown.down.exact.prevent="focusNext(true)"
-              >
+            <li
+              v-for="(item, index) in block.items"
+              :key="index"
+              class="text-base lg:text-lg text-light"
+            >
+              <NuxtLink :to="item.url" class="flex lg:items-center group">
                 <svg-icon
                   :name="item.icon"
                   title="Facebook icon"
                   height="1.5em"
                   width="1.5em"
                 />
-                
+
                 <span class="flex flex-col lg:flex-row lg:items-center">
-                  <span class="block ml-2 font-bold  group-hover:text-green">
+                  <span class="block ml-2 font-bold  group-hover:text-yellow">
                     {{ item.name }}
                     <span
                       v-if="item.new == true"
@@ -111,29 +128,30 @@
                     </span>
                   </span>
                   <!-- description -->
-                  <!-- <span
-                    v-if="item.description != ''"
-                    class="block ml-2 lg:ml-4 text-sm text-gray-600 group-hover:text-green"
-                    >{{ item.description }}
-                  </span> -->
-
-                  <!-- extra links -->
                   <span
-                    v-if="item.subitems != []"
-                    class="block ml-2 lg:ml-4 text-sm text-gray-600 group-hover:text-green"
-                  >
-                    <template v-for="(subitem, index) in item.subitems">
-                      <span :key="subitem.url">
-                        <span v-if="index != 0">, </span>
-                        <NuxtLink :to="subitem.url" class="underline">
-                          {{ subitem.name }}
-                        </NuxtLink>
-                      </span>
-                    </template>
+                    v-if="item.description != ''"
+                    class="block ml-2 lg:ml-4 mt-1 text-sm text-gray-600 group-hover:text-yellow opacity-75"
+                    >{{ item.description }}
                   </span>
-                  <!-- end extra links -->
                 </span>
               </NuxtLink>
+              <!-- extra links start -->
+              <span
+                v-if="item.subitems.length > 0"
+                class="block mt-2 ml-2 lg:ml-4 text-sm text-gray-600 group-hover:text-yellow"
+              >
+                <span
+                  v-for="(subitem, index) in item.subitems"
+                  :key="index"
+                  class="block lg:inline"
+                >
+                  <span v-if="index != 0" class="hidden lg:inline">, </span
+                  ><NuxtLink :to="subitem.url" class="underline">{{
+                    subitem.name
+                  }}</NuxtLink>
+                </span>
+              </span>
+              <!-- end extra links -->
             </li>
           </ul>
         </template>
@@ -143,20 +161,23 @@
 </template>
 
 <script>
+import { mixin as onClickOutside } from "vue-on-click-outside";
+
 export default {
   props: {
     menuData: Object,
     menuIndex: Number
   },
+  mixins: [onClickOutside],
   mounted() {
     this.menuItems = document.querySelectorAll(".mega-menu a");
   },
   computed: {
-    thirdItem: function () {
+    thirdItem: function() {
       if (this.menuIndex == 3) {
-        return true
+        return true;
       }
-      return false
+      return false;
     }
   },
   data() {
