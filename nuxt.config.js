@@ -69,7 +69,7 @@ export default {
     "@nuxtjs/google-fonts",
     "@nuxtjs/svg-sprite",
     "@nuxtjs/style-resources",
-    "@nuxtjs/sanity"
+    "@nuxtjs/sanity/module"
   ],
 
   googleFonts: {
