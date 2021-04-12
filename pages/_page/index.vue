@@ -5,31 +5,19 @@
       :image="page.content.headerImage"
     />
     <!-- if normal page, show content sections -->
-    <template v-if="page._type == 'page'">
-      <template v-for="(section, index) in page.content.sections">
-        <SectionsMagazine
-          v-if="section._type == 'magSection'"
-          :key="section._key"
-          :section="section"
-        />
-        <sections-cta-section
-          v-else-if="section._type == 'ctaSection'"
-          :key="section._key"
-          :section="section"
-        />
-        <sections-faq-section
-          v-else-if="section._type == 'faqSection'"
-          :key="section._key"
-          :section="section"
-          :sectionIndex="index"
-        />
-      </template>
-    </template>
+    <!-- <template v-if="page._type == 'page'"> -->
+    <component
+      v-for="(section, index) in page.content.sections"
+      :is="getComponentFromSectionType(section._type)"
+      :key="index"
+      :section="section"
+    />
+    <!-- </template> -->
 
     <!-- if simple page, show body -->
-    <template v-if="page._type == 'pageSimple'">
+    <!-- <template v-if="page._type == 'pageSimple'">
       <p>simple page</p>
-    </template>
+    </template> -->
   </article>
 </template>
 
@@ -82,6 +70,18 @@ export default {
         }
       }
     };
+  },
+
+  methods: {
+    getComponentFromSectionType(sectionType) {
+      if (sectionType == "magSection") {
+        return "SectionsMagazine";
+      } else if (sectionType == "faqSection") {
+        return "SectionsFaqSection";
+      } else if (sectionType == "ctaSection") {
+        return "SectionsCtaSection";
+      }
+    }
   }
 };
 </script>

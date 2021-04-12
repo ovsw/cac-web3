@@ -8,13 +8,13 @@
     data-theme="frame"
     data-theme-color="green"
   >
-    <div class="[ magSection__image ] relative">
+    <div class="[ magSection__image ] relative flex-grow">
       <img
         class="object-cover w-full h-full"
         :src="
           $urlFor(section.image)
-            .width(300)
-            .height(300)
+            .width(1300)
+            .height(1300)
         "
         :alt="section.image.alt"
         :srcset="
@@ -37,7 +37,11 @@
             $urlFor(section.image)
               .width(1600)
               .height(1000) +
-            ' 1600w, '
+            ' 1600w, ' +
+            $urlFor(section.image)
+              .width(2500)
+              .height(1500) +
+            ' 2500w'
         "
         sizes="
           (min-width: 1500px) 860px,
@@ -73,15 +77,14 @@
     <div
       class="[ magSection__content ] 
         flex-auto 
-        lg:max-w-2xl
+        border-2 border-green
 
-        my-grd
-        lg:my-0 lg:ml-grd
-      
-        p-6 md:p-10 lg:p-20
-        space-y-6
+        my-grd p-6 space-y-6
 
-        border-2 md:border-5 border-green"
+        md:border-5 md:p-10 
+        
+        lg:max-w-3xl lg:p-20  lg:ml-grd lg:my-0
+        "
     >
       <div class="flow">
         <h2>{{ section.title }}</h2>
@@ -98,10 +101,17 @@
           />
         </div>
       </div>
-
-      <!-- <div class="magSection__buttonWrapper">      
-          <a href="https://dap-web.netlify.app/laguna-splash-water-park-attractions/" class="[ button ] [ button--colored-bg button--color-green ]">View Our Attractions!</a>
-      </div> -->
+      <div v-if="sectionButtons" class="magSection__buttonWrapper">
+        <l-cluster>
+          <Button
+            v-for="(button, index) in sectionButtons"
+            :url="button.url || '#'"
+            :key="index"
+          >
+            {{ button.text }}
+          </Button>
+        </l-cluster>
+      </div>
     </div>
   </section>
 </template>
@@ -113,7 +123,18 @@ export default {
   name: "MagSection",
   props: {
     section: {
-      type: Object
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    sectionButtons() {
+      return this.section.button1 || [];
+      // const sectionButtonsArr = this.section.button1;
+      // const filteredSectionButtonsArr = sectionButtonsArr
+      //   ? sectionButtonsArr.filter(button => button.text && button.url)
+      //   : [];
+      // return filteredSectionButtonsArr;
     }
   },
   data() {

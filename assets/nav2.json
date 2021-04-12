@@ -268,7 +268,7 @@
             "subitems": [],
             "new": false,
             "url": "/camp-pictures/",
-            "icon": "icon-heart-light"
+            "icon": "icon-camera-retro-light"
           },
           {
             "name": "Camp Season Videos",
@@ -280,11 +280,11 @@
           },
           {
             "name": "Parent Login",
-            "description": "",
+            "description": "enroll, update info, etc.",
             "subitems": [],
             "new": false,
             "url": "/parent-log-in/",
-            "icon": "icon-graduation-cap-light"
+            "icon": "icon-sign-in-alt-light"
           }
         ]
       }

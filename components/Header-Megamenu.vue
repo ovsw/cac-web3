@@ -57,20 +57,18 @@
                 @keydown.up.exact.prevent=""
               >
                 <svg-icon
+                  style="position: relative; top: 0.5em;"
                   :name="item.icon"
                   title="Facebook icon"
-                  height="1.25em"
-                  width="1.25em"
+                  height="1.5em"
+                  width="1.5em"
                 />
-                <span class="ml-2">
+                <span class="ml-3">
                   <span
                     class="block font-bold group-hover:text-green-light flex items-center"
                   >
                     <span>{{ item.name }}</span>
-                    <span
-                      v-if="item.new == true"
-                      class="ml-1 bg-red text-yellow px-2 py-1 relative -inset-y-1 rounded-full uppercase font-bold text-xs"
-                    >
+                    <span v-if="item.new == true" class="newTag">
                       New
                     </span>
                   </span>

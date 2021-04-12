@@ -1,6 +1,5 @@
 <<template>
   <section class="[ ctaSection ]" data-theme-color="green" data-theme="dark">
-    
     <!-- {% if section.image.asset %}
       {% responsiveImage section.image, 
       "500, 1200, 1600", 
@@ -9,30 +8,28 @@
       imageAlt
     %}
     {% endif %} -->
-    
+
     <div class="[ ctaSection__color-overlay ] [ pinned ]"></div>
-    
+
     <div class="[ wrapper ]">
-        
       <div class="[ ctaSection__content ] [ pannel ]">
         <div class="ctaSection__leftColumn [ flow ]">
-          <h2>{{section.title}}</h2>
+          <h2>{{ section.title }}</h2>
 
           <div v-if="section.subtitle" class="ctaSection__subHeadingWrapper">
-            <h3 class='subtitle'>{{section.subtitle}}</h3>
+            <h3 class="subtitle">{{ section.subtitle }}</h3>
           </div>
 
-       
-            <div v-if="section.text" class="ctaSection__rteWrapper [ flow ]">
-              <SanityContent :blocks="section.text" />
-            </div>
-          
+          <div v-if="section.text" class="ctaSection__rteWrapper [ flow ]">
+            <SanityContent :blocks="section.text" />
+          </div>
         </div>
 
-        
-        <div v-if="section.buttons" class="ctaSection__rightColumn cluster-l">      
+        <div v-if="section.buttons" class="ctaSection__rightColumn cluster-l">
           <div v-for="button in section.buttons">
-            <a :href="button.url" class="[ button button--outline-light ]">{{button.text}}</a>
+            <a :href="button.url" class="[ button button--outline-light ]">{{
+              button.text
+            }}</a>
           </div>
         </div>
       </div>
@@ -41,23 +38,23 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      section: {
-        type: Object,
-      },
-    },
+export default {
+  props: {
+    section: {
+      type: Object,
+      required: true
+    }
   }
+};
 </script>
 
 <style lang="scss" scoped>
 $sectionColors: (
-  'green': get-color('primary'),
-  'blue': get-color('secondary'),
-  'red': get-color('accent'),
-  'yellow': get-color('tertiary')
+  "green": get-color("primary"),
+  "blue": get-color("secondary"),
+  "red": get-color("accent"),
+  "yellow": get-color("tertiary")
 );
-
 
 .ctaSection {
   position: relative;
@@ -68,9 +65,9 @@ $sectionColors: (
     // pinned
 
     -webkit-filter: grayscale(100%);
-    -moz-filter:    grayscale(100%);
-    -ms-filter:     grayscale(100%);
-    -o-filter:      grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
     filter: gray;
     z-index: 10;
     opacity: 15%;
@@ -80,7 +77,7 @@ $sectionColors: (
     z-index: 5;
 
     @each $name, $color in $sectionColors {
-      section[data-theme-color=#{$name}] & {
+      section[data-theme-color="#{$name}"] & {
         background-color: $color;
       }
     }
@@ -90,34 +87,35 @@ $sectionColors: (
     position: relative;
     z-index: 20;
 
-    section[data-theme=dark] & {
-      color: get-color('light-glare');
-      border: 3px solid rgba($color: get-color('light-glare'), $alpha: 0.5);
+    section[data-theme="dark"] & {
+      color: get-color("light-glare");
+      border: 3px solid rgba($color: get-color("light-glare"), $alpha: 0.5);
     }
-    section[data-theme=light] & {
-      color: get-color('dark');
-      border: 5px solid rgba($color: get-color('dark'), $alpha: 0.5);
+    section[data-theme="light"] & {
+      color: get-color("dark");
+      border: 5px solid rgba($color: get-color("dark"), $alpha: 0.5);
     }
 
     > * + * {
       margin-top: var(--flow-space);
     }
-    
-    @include media-query('lg') {
+
+    @include media-query("lg") {
       display: flex;
       align-items: center;
     }
 
-    h2,h3 {
-      font-size: get-size('700');
-      @include media-query('md') {
-      font-size: get-size('800');
+    h2,
+    h3 {
+      font-size: get-size("700");
+      @include media-query("md") {
+        font-size: get-size("800");
       }
     }
 
-    .subtitle{
-      @include media-query('lg') {
-        font-size: 28px!important;
+    .subtitle {
+      @include media-query("lg") {
+        font-size: 28px !important;
       }
     }
 
@@ -128,19 +126,17 @@ $sectionColors: (
 
   &__leftColumn {
     flex: 2;
-    @include media-query('lg') {
+    @include media-query("lg") {
       padding-right: calc(var(--grid-space) * 2);
     }
   }
-  
+
   &__rightColumn {
     flex: 0 1 auto;
   }
-
-
 }
 
 .bigHeadingSection + .ctaSection {
-  margin-top: 0!important;
+  margin-top: 0 !important;
 }
 </style>
