@@ -5,6 +5,7 @@
       :image="page.content.headerImage"
       :narrow="page._type == 'pageSimple' ? true : false"
     />
+
     <!-- if normal page, show content sections -->
     <template v-if="page._type == 'page'">
       <component
@@ -13,15 +14,8 @@
         :key="section._key"
         :section="section"
       />
-
-      <!-- <div v-for="(section, index) in page.content.sections" :key="index">
-      <component
-        :is="getComponentFromSectionType(section._type)"
-        :section="section"
-      />
-    </div> -->
     </template>
-    <!-- TODO: simple pages  -->
+
     <!-- if simple page, show body -->
     <template v-if="page._type == 'pageSimple'">
       <SimplePageContent :page="page" />
@@ -88,6 +82,8 @@ export default {
         return "SectionsFaqSection";
       } else if (sectionType == "ctaSection") {
         return "SectionsCtaSection";
+      } else if (sectionType == "bigHeading") {
+        return "SectionsBigHeading";
       }
       return "SectionsDefault";
     }
