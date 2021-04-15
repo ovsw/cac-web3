@@ -170,4 +170,7 @@
   .footer__col ul {
     @apply space-y-3 lg:space-y-2;
   }
+  .outline-white a::focus {
+    outline-color: white !important;
+  }
 }

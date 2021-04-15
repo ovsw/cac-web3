@@ -21,7 +21,7 @@
 
 <style>
 :focus {
-  outline: 2px dashed #2d8262 !important;
-  outline-offset: 0.5em !important;
+  outline: 2px dashed #2d8262;
+  outline-offset: 0.5em;
 }
 </style>

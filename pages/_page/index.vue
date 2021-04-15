@@ -3,17 +3,18 @@
     <page-header
       :title="page.content.title"
       :image="page.content.headerImage"
+      :narrow="page._type == 'pageSimple' ? true : false"
     />
     <!-- if normal page, show content sections -->
     <template v-if="page._type == 'page'">
-    <component
-      v-for="section in page.content.sections"
-      :is="getComponentFromSectionType(section._type)"
-      :key="section._key"
-      :section="section"
-    />
+      <component
+        v-for="section in page.content.sections"
+        :is="getComponentFromSectionType(section._type)"
+        :key="section._key"
+        :section="section"
+      />
 
-    <!-- <div v-for="(section, index) in page.content.sections" :key="index">
+      <!-- <div v-for="(section, index) in page.content.sections" :key="index">
       <component
         :is="getComponentFromSectionType(section._type)"
         :section="section"
@@ -23,7 +24,7 @@
     <!-- TODO: simple pages  -->
     <!-- if simple page, show body -->
     <template v-if="page._type == 'pageSimple'">
-      <p>simple page</p>
+      <SimplePageContent :page="page" />
     </template>
   </article>
 </template>

@@ -23,7 +23,10 @@
       :id="12312321"
       :data-id="12312321"
     >
-      <div class="[ wrapper ] z-10 relative lg:mt-36">
+      <div
+        class="[ wrapper ] z-10 relative lg:mt-36"
+        :class="{ 'max-w-screen-xl': narrow }"
+      >
         <div
           class="page-header__content bg-light inline-block p-14 rounded-tr-large"
         >
@@ -44,6 +47,10 @@ export default {
     },
     image: {
       type: Object
+    },
+    narrow: {
+      type: Boolean,
+      default: false
     }
   }
 };

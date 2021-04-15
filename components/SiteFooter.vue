@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer footer bg-green text-light pt-20">
+  <footer class="footer bg-green text-light pt-20">
     <div class="container mx-auto px-4 md:px-6 pb-10">
       <div
         class="footer__grid space-y-7 md:grid gap-5 md:grid-cols-3 lg:grid-cols-5 md:space-y-0 "
@@ -136,4 +136,8 @@
 export default {};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.footer a:focus {
+  outline: 2px dashed white;
+}
+</style>
