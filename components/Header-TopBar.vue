@@ -12,7 +12,7 @@
           />
           1 (800) 966-1406
         </a>
-        <a href="/" class="hidden sm:inline-flex items-center"
+        <a href="/dates-and-rates/" class="hidden sm:inline-flex items-center"
           ><svg-icon
             name="icon-calendar"
             title="calendar icon"
@@ -22,7 +22,7 @@
           />
           Dates &amp; Rates</a
         >
-        <a href="/" class="hidden lg:inline-flex items-center"
+        <a href="/contact/" class="hidden lg:inline-flex items-center"
           ><svg-icon
             name="icon-question"
             title="question mark icon"
@@ -46,8 +46,9 @@
           CAC Blog</a
         >
         <a
-          href="/"
+          href="https://canadianadventurecamp.campbrainregistration.com/?ReturnUrl=%2FHome%2FLanding"
           class="bg-red text-light no-underline uppercase font-semibold px-2"
+          rel="noopener"
         >
           <!-- <svg-icon
             name="icon-question"
