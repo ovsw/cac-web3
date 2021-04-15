@@ -107,13 +107,8 @@
               >
             </li>
             <li>
-              <NuxtLink to="/accessibility-statement/"
-                >Accessibility Statement</NuxtLink
-              >
-            </li>
-            <li>
-              <NuxtLink to="/accessibility-policy/"
-                >Accessibility Policy</NuxtLink
+              <NuxtLink to="/website-accessibility-policy/"
+                >Website Accessibility Policy</NuxtLink
               >
             </li>
           </ul>
