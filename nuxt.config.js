@@ -75,7 +75,7 @@ export default {
   googleFonts: {
     display: "swap",
     download: true,
-    overwriting: true,
+    overwriting: false,
     families: {
       "Open+Sans": {
         wght: [400, 600],
