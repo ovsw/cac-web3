@@ -69,11 +69,18 @@
   /* END PREVIEW STYLES */
 
   /* ALTERNATING MAG SECTIONS */
-  .magSection:nth-child(even) {
+  /* .magSection:nth-child(even) {
     flex-direction: row-reverse !important;
   }
   .magSection:nth-child(even) .magSection__content {
     @apply md:ml-0 md:mr-grd;
+  } */
+  .magSection + .magSection:nth-child(odd) {
+    /* background-color: red !important; */
+    flex-direction: row-reverse !important;
+  }
+  .magSection + .magSection:nth-child(odd) .magSection__image {
+    @apply 2xl:ml-0 2xl:mr-grd;
   }
 }
 
