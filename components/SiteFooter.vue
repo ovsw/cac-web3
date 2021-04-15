@@ -93,6 +93,7 @@
               >
             </li>
             <li><NuxtLink to="/history/">History</NuxtLink></li>
+            <li><NuxtLink to="/join-our-team/">Join Our Team</NuxtLink></li>
             <li><NuxtLink to="/contact/">Contact Us</NuxtLink></li>
           </ul>
         </div>
