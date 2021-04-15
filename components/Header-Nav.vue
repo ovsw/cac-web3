@@ -38,7 +38,7 @@
       style="top:60px;"
       :class="menuOpen ? 'block' : 'hidden'"
     >
-      <div class="md:flex md:justify-end  md:mr-40 ">
+      <div class="md:flex md:justify-end md:mr-40 lg:space-x-6 lg:py-1">
         <li class="nav__item">
           <HeaderMegamenu
             :menuData="nav[1]"
@@ -55,7 +55,7 @@
         </li>
       </div>
 
-      <div class="md:flex md:justify-start ">
+      <div class="md:flex md:justify-start  lg:space-x-6 lg:py-1">
         <li class="nav__item ">
           <HeaderMegamenu
             :menuData="nav[2]"

@@ -57,7 +57,7 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .logo {
-    transform: translateX(-110px);
+    transform: translateX(-90px);
   }
   .logo img {
     width: 200px;
