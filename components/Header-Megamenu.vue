@@ -83,9 +83,9 @@
                 <span
                   v-for="(subitem, index) in item.subitems"
                   :key="index"
-                  class="block lg:inline"
+                  class="block md:inline"
                 >
-                  <span v-if="index != 0" class="hidden lg:inline">, </span
+                  <span v-if="index != 0" class="hidden md:inline">, </span
                   ><NuxtLink
                     :to="subitem.url"
                     class="underline text-light md:text-dark py-1 inline-block"
