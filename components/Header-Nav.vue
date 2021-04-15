@@ -6,41 +6,6 @@
   >
     <!-- x-bind:data-open="mainMenuisOpen"
     :aria-expanded="mainMenuisOpen" -->
-    <ul
-      class="nav__list 
-      
-      absolute z-10 md:static
-
-      shadow-lg
-
-      w-full bg-light left-0 right-0 top-0
-
-      px-2 pb-32 md:pb-2 md:pt-2
-      mt-8 md:mt-0
-
-      md:flex justify-center 
-      uppercase tracking-wide font-bold
-      
-       overflow-y-scroll md:overflow-y-visible
-        h-screen md:h-auto
-    "
-      style="top: 2.5rem;"
-      :class="menuOpen ? 'block' : 'hidden'"
-    >
-     <div class="md:flex md:justify-end  md:mr-40">
-      <li class="nav__item "><HeaderMegamenu :menuData="nav[0]" :menuIndex="1" /></li>
-      <li class="nav__item"><HeaderMegamenu :menuData="nav[1]" :menuIndex="2" /></li>
-     </div>
-
-     <div class="md:flex md:justify-start ">
-      <li class="nav__item "><HeaderMegamenu :menuData="nav[2]" :menuIndex="3" /></li>
-      <li class="nav__item md:mr-8">
-        <NuxtLink to="/programs/general-camp-program/" class="block text-base focus:outline-none md:p-4 focus:bg-green focus:text-light-light font-bold uppercase">Contact Us</NuxtLink>
-      </li>
-     </div>
-
-    </ul>
-
     <div class="hamburger-menu__container flex md:hidden">
       <button
         aria-controls="nav-list"
@@ -53,6 +18,56 @@
         <div></div>
       </button>
     </div>
+
+    <ul
+      class="nav__list 
+      
+      absolute w-full z-10  
+
+      shadow-lg justify-center bg-light-dark left-0 right-0 top-10
+
+      p-4 pb-32 md:pb-2 md:pt-2
+      mt-8 md:mt-0
+
+      md:static
+      md:flex 
+      
+       overflow-y-scroll md:overflow-y-visible
+        h-screen md:h-auto
+    "
+      style="top:60px;"
+      :class="menuOpen ? 'block' : 'hidden'"
+    >
+      <div class="md:flex md:justify-end  md:mr-40 ">
+        <li class="nav__item">
+          <HeaderMegamenu
+            :menuData="nav[1]"
+            :menuIndex="1"
+            @close-mobile-menu="hideMenu"
+          />
+        </li>
+        <li class="nav__item">
+          <HeaderMegamenu
+            :menuData="nav[0]"
+            :menuIndex="2"
+            @close-mobile-menu="hideMenu"
+          />
+        </li>
+      </div>
+
+      <div class="md:flex md:justify-start ">
+        <li class="nav__item ">
+          <HeaderMegamenu
+            :menuData="nav[2]"
+            :menuIndex="3"
+            @close-mobile-menu="hideMenu"
+          />
+        </li>
+        <li class="nav__item md:mr-8" @click="hideMenu">
+          <NuxtLink to="/contact/" class="">Contact Us</NuxtLink>
+        </li>
+      </div>
+    </ul>
   </nav>
 </template>
 
@@ -68,12 +83,18 @@ export default {
   methods: {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
+    },
+    hideMenu() {
+      this.menuOpen = false;
     }
   }
 };
 </script>
 
 <style>
+.nav__list {
+  top: 330px;
+}
 .hamburger-menu__container {
   align-items: center;
   justify-content: flex-end;
@@ -88,8 +109,8 @@ export default {
   justify-content: center;
   background-color: transparent;
   border: none;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .hamburger-menu div {

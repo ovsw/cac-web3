@@ -10,42 +10,42 @@
             "description": "what sets us apart",
             "new": false,
             "url": "/canadian-adventure-camp-experience/",
-            "icon": "icon-exclamation-light"
+            "icon": "lightbulb-on-duotone"
           },
           {
             "name": "Dates & Rates",
             "description": "for 2021",
             "new": true,
             "url": "/dates-and-rates/",
-            "icon": "icon-calendar-alt-light"
+            "icon": "calendar-alt-duotone"
           },
           {
             "name": "Health & safety",
             "description": "keeping campers safe",
             "new": false,
             "url": "/health-and-safety/",
-            "icon": "icon-star-of-life-light"
+            "icon": "star-of-life-duotone"
           },
           {
             "name": "Accommodations",
             "description": "and facilities",
             "new": false,
             "url": "/accommodation-and-facilities/",
-            "icon": "icon-house-light"
+            "icon": "house-duotone"
           },
           {
             "name": "International Campers",
             "description": "welcome!",
             "new": false,
             "url": "/international-campers/",
-            "icon": "icon-globe-americas-light"
+            "icon": "globe-americas-duotone"
           },
           {
             "name": "Testimonials",
             "description": "from our families",
             "new": false,
             "url": "/testimoanials/",
-            "icon": "icon-comments-light"
+            "icon": "comments-duotone"
           }
         ]
       },
@@ -58,7 +58,7 @@
             "subitems": [],
             "new": false,
             "url": "/programs/general-camp-program/",
-            "icon": "icon-heart-light"
+            "icon": "heart-duotone"
           },
           {
             "name": "Y.L.P.",
@@ -66,7 +66,7 @@
             "subitems": [],
             "new": true,
             "url": "/all-new-youth-leadership-program/",
-            "icon": "icon-graduation-cap-light"
+            "icon": "graduation-cap-duotone"
           },
           {
             "name": "Specialty Programs",
@@ -91,7 +91,7 @@
             ],
             "new": false,
             "url": "/programs/specialty-summer-camp-programs/",
-            "icon": "icon-star-light"
+            "icon": "star-duotone"
           }
         ]
       }
@@ -108,42 +108,42 @@
             "description": "Established in 1975",
             "new": false,
             "url": "/our-summer-camp-history-and-goal/",
-            "icon": "icon-book-heart-light"
+            "icon": "book-heart-duotone"
           },
           {
             "name": "Unique Location",
             "description": "welcome to Adventure Island!",
             "new": false,
             "url": "/private-island-camp-location-ontario/",
-            "icon": "icon-leaf-maple-light"
+            "icon": "leaf-maple-duotone"
           },
           {
             "name": "Great Leadership",
             "description": "asdasd",
             "new": false,
             "url": "/great-leadership/",
-            "icon": "icon-users-light"
+            "icon": "users-duotone"
           },
           {
             "name": "Memberships",
             "description": "& Partnerships",
             "new": false,
             "url": "/memeberships-partnerships/",
-            "icon": "icon-handshake-light"
+            "icon": "handshake-alt-duotone"
           },
           {
             "name": "Alumni",
             "description": "life-long memories",
             "new": false,
             "url": "/alumni/",
-            "icon": "icon-graduation-cap-light"
+            "icon": "graduation-cap-duotone"
           },
           {
             "name": "Photos & Videos",
             "description": "take a look around",
             "new": false,
             "url": "/photo-gallery/",
-            "icon": "icon-camera-retro-light"
+            "icon": "camera-retro-duotone"
           }
         ]
       },
@@ -156,7 +156,7 @@
             "subitems": [],
             "new": false,
             "url": "/programs/general-camp-program/",
-            "icon": "icon-heart-light"
+            "icon": "heart-duotone"
           },
           {
             "name": "Y.L.P.",
@@ -164,7 +164,7 @@
             "subitems": [],
             "new": true,
             "url": "/all-new-youth-leadership-program/",
-            "icon": "icon-graduation-cap-light"
+            "icon": "graduation-cap-duotone"
           },
           {
             "name": "Specialty Programs",
@@ -189,7 +189,7 @@
             ],
             "new": false,
             "url": "/programs/specialty-summer-camp-programs/",
-            "icon": "icon-star-light"
+            "icon": "star-duotone"
           }
         ]
       }
@@ -206,56 +206,56 @@
             "description": "one-stop resource",
             "new": false,
             "url": "/download-parent-guide/",
-            "icon": "icon-clipboard-list-check-light"
+            "icon": "clipboard-list-check-duotone"
           },
           {
             "name": "FAQs",
             "description": "Frequent Questions",
             "new": false,
             "url": "/faqs/",
-            "icon": "icon-question"
+            "icon": "question-circle-duotone"
           },
           {
             "name": "Dates & Rates",
             "description": "for 2021",
             "new": true,
             "url": "/dates-and-rates/",
-            "icon": "icon-calendar-alt-light"
+            "icon": "calendar-alt-duotone"
           },
           {
             "name": "Y.L.P.",
             "description": "Youth Leadership Programming",
             "new": true,
             "url": "/all-new-youth-leadership-program/",
-            "icon": "icon-graduation-cap-light"
+            "icon": "graduation-cap-duotone"
           },
           {
             "name": "Getting to Camp",
             "description": "bus & car",
             "new": false,
             "url": "/transportation/",
-            "icon": "icon-map-signs-light"
+            "icon": "map-signs-duotone"
           },
           {
             "name": "International Travel",
             "description": "to camp",
             "new": false,
             "url": "/transportation/international-campers/",
-            "icon": "icon-globe-americas-light"
+            "icon": "globe-americas-duotone"
           },
           {
             "name": "Stay in touch",
             "description": "with your camper(s)",
             "new": false,
             "url": "/stay-in-touch-with-your-camper/",
-            "icon": "icon-envelope-light"
+            "icon": "envelope-open-text-duotone"
           },
           {
             "name": "Visitor's Days",
             "description": "and places to stay",
             "new": false,
             "url": "/visitor-days/",
-            "icon": "icon-door-open-light"
+            "icon": "door-open-duotone"
           }
         ]
       },
@@ -268,7 +268,7 @@
             "subitems": [],
             "new": false,
             "url": "/camp-pictures/",
-            "icon": "icon-camera-retro-light"
+            "icon": "camera-retro-duotone"
           },
           {
             "name": "Camp Season Videos",
@@ -276,7 +276,7 @@
             "subitems": [],
             "new": false,
             "url": "/camp-video/",
-            "icon": "icon-film-light"
+            "icon": "film-duotone"
           },
           {
             "name": "Parent Login",
@@ -284,7 +284,7 @@
             "subitems": [],
             "new": false,
             "url": "/parent-log-in/",
-            "icon": "icon-sign-in-alt-light"
+            "icon": "sign-in-alt-duotone"
           }
         ]
       }

@@ -1,14 +1,14 @@
 <template>
-  <div class="site-head__topbar text-sm">
-    <div class="wrapper">
-      <div>
-        <a href="tel:1-800-966-1406">
+  <div class="site-head__topbar text-sm bg-green text-light">
+    <div class="wrapper flex justify-between items-center">
+      <div class="md:space-x-4">
+        <a href="tel:1-800-966-1406" class="flex items-center">
           <svg-icon
             name="icon-phone"
             title="phone icon"
             height="1em"
             width="1em"
-            class="hidden lg:inline"
+            class=""
           />
           1 (800) 966-1406
         </a>
@@ -34,8 +34,8 @@
         >
       </div>
 
-      <div>
-        <a href="/" class="hidden md:inline">
+      <div class="md:space-x-4">
+        <a href="/" class="hidden md:inline-block">
           <svg-icon
             name="icon-newspaper"
             title="newspaper icon"
@@ -63,4 +63,4 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>

@@ -91,4 +91,19 @@
   .newTag {
     @apply ml-1 bg-red text-yellow px-2 py-1 relative leading-none rounded-full uppercase font-bold text-xxs;
   }
+  .site-head__topbar a {
+    @apply py-2;
+  }
+  .site-head__topbar a svg {
+    @apply mr-1 md:mr-2;
+  }
+  .nav__item {
+    @apply border-b md:border-none;
+  }
+  .nav__item > div > button,
+  .nav__item > a {
+    @apply text-base uppercase flex  tracking-wide font-bold
+      p-4  w-full text-left
+      md:p-4 focus:bg-green focus:text-light-light;
+  }
 }

@@ -1,10 +1,7 @@
 <template>
   <div class="lg:relative" v-on-click-outside="hideMenu">
     <!-- @mouseover="showMenu" @mouseleave="hideMenu" -->
-    <button
-      class=" text-base focus:outline-none md:p-4 focus:bg-green focus:text-light-light font-bold uppercase"
-      @click="toggleMenu"
-    >
+    <button class="" @click="toggleMenu">
       {{ menuData.name }}
     </button>
     <!-- @keydown.shift.tab="hideMenu"
@@ -18,7 +15,7 @@
       <div
         v-show="isVisible"
         class="mega-menu 
-        w-full normal-case font-normal bg-light shadow-md rounded-lg border
+        w-full normal-case font-normal bg-green text-light md:bg-light md:text-dark md:shadow-md rounded-lg border
         z-30 left-0 overflow-hidden mt-4 
 
         md:w-auto md:absolute md:left-2 md:right-2
@@ -40,7 +37,7 @@
               class="
               w-full md:w-1/2 
               flex-shrink-0
-              p-2 
+              p-2 pl-4
               text-base md:text-lg
               "
               :class="[
@@ -59,9 +56,9 @@
                 <svg-icon
                   style="position: relative; top: 0.5em;"
                   :name="item.icon"
-                  title="Facebook icon"
                   height="1.5em"
                   width="1.5em"
+                  class="text-light md:text-green"
                 />
                 <span class="ml-3">
                   <span
@@ -73,7 +70,7 @@
                     </span>
                   </span>
                   <span
-                    class="block text-sm text-gray-600 group-hover:text-green"
+                    class="block font-normal lowercase text-sm opacity-60 md:text-gray-600 group-hover:text-green"
                     >{{ item.description }}</span
                   >
                 </span>
@@ -89,9 +86,11 @@
                   class="block lg:inline"
                 >
                   <span v-if="index != 0" class="hidden lg:inline">, </span
-                  ><NuxtLink :to="subitem.url" class="underline">{{
-                    subitem.name
-                  }}</NuxtLink>
+                  ><NuxtLink
+                    :to="subitem.url"
+                    class="underline text-light md:text-dark py-1 inline-block"
+                    >{{ subitem.name }}</NuxtLink
+                  >
                 </span>
               </span>
               <!-- end extra links -->
@@ -108,12 +107,7 @@
               class="text-base lg:text-lg text-light"
             >
               <NuxtLink :to="item.url" class="flex lg:items-center group">
-                <svg-icon
-                  :name="item.icon"
-                  title="Facebook icon"
-                  height="1.5em"
-                  width="1.5em"
-                />
+                <svg-icon :name="item.icon" height="1.5em" width="1.5em" />
 
                 <span class="flex flex-col lg:flex-row lg:items-center">
                   <span class="block ml-2 font-bold  group-hover:text-yellow">
@@ -195,6 +189,7 @@ export default {
     hideMenu() {
       this.isVisible = false;
       this.focusedIndex = 0;
+      this.$emit("close-mobile-menu");
     },
     startArrowKeys() {
       this.menuItems[0].focus();

@@ -5,19 +5,26 @@
       :image="page.content.headerImage"
     />
     <!-- if normal page, show content sections -->
-    <!-- <template v-if="page._type == 'page'"> -->
+    <template v-if="page._type == 'page'">
     <component
-      v-for="(section, index) in page.content.sections"
+      v-for="section in page.content.sections"
       :is="getComponentFromSectionType(section._type)"
-      :key="index"
+      :key="section._key"
       :section="section"
     />
-    <!-- </template> -->
 
+    <!-- <div v-for="(section, index) in page.content.sections" :key="index">
+      <component
+        :is="getComponentFromSectionType(section._type)"
+        :section="section"
+      />
+    </div> -->
+    </template>
+    <!-- TODO: simple pages  -->
     <!-- if simple page, show body -->
-    <!-- <template v-if="page._type == 'pageSimple'">
+    <template v-if="page._type == 'pageSimple'">
       <p>simple page</p>
-    </template> -->
+    </template>
   </article>
 </template>
 
@@ -81,6 +88,7 @@ export default {
       } else if (sectionType == "ctaSection") {
         return "SectionsCtaSection";
       }
+      return "SectionsDefault";
     }
   }
 };

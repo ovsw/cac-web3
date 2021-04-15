@@ -1,31 +1,21 @@
 <template>
   <div>
     <component :is="'style'" v-if="image">
-      .page-header[data-id="12312321"] {
-        background-image: url('{{
-          $urlFor(image)
+      .page-header[data-id="12312321"] { background-image: url('{{
+        $urlFor(image)
           .width(600)
           .height(400)
-          }}')!important;
-        }
-      @media screen and (min-width: 600px) {
-        .page-header[data-id="12312321"] {
-          background-image: url('{{
-            $urlFor(image)
-            .width(1200)
-            .height(800)
-            }}')!important;
-        }
-      }
-      @media screen and (min-width: 1200px) {
-        .page-header[data-id="12312321"] {
-          background-image: url('{{
-            $urlFor(image)
-            .width(1600)
-            .height(700)
-            }}')!important;
-        }
-      }
+      }}')!important; } @media screen and (min-width: 600px) {
+      .page-header[data-id="12312321"] { background-image: url('{{
+        $urlFor(image)
+          .width(1200)
+          .height(800)
+      }}')!important; } } @media screen and (min-width: 1200px) {
+      .page-header[data-id="12312321"] { background-image: url('{{
+        $urlFor(image)
+          .width(1600)
+          .height(1200)
+      }}')!important; } }
     </component>
 
     <!-- <div class="foo" >
@@ -99,7 +89,7 @@ export default {
 
   &::before {
     background-color: #000;
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 100%;
