@@ -3,25 +3,22 @@
     <page-header
       :title="page.content.title"
       :image="page.content.headerImage"
+      :narrow="page._type == 'pageSimple' ? true : false"
     />
 
-    <template v-for="(section, index) in page.content.sections">
-      <SectionsMagazine
-        v-if="section._type == 'magSection'"
+    <!-- if normal page, show content sections -->
+    <template v-if="page._type == 'page'">
+      <component
+        v-for="section in page.content.sections"
+        :is="getComponentFromSectionType(section._type)"
         :key="section._key"
         :section="section"
       />
-      <sections-cta-section
-        v-else-if="section._type == 'ctaSection'"
-        :key="section._key"
-        :section="section"
-      />
-      <sections-faq-section
-        v-else-if="section._type == 'faqSection'"
-        :key="section._key"
-        :section="section"
-        :sectionIndex="index"
-      />
+    </template>
+
+    <!-- if simple page, show body -->
+    <template v-if="page._type == 'pageSimple'">
+      <SimplePageContent :page="page" />
     </template>
   </article>
 </template>
@@ -84,6 +81,21 @@ export default {
         }
       }
     };
+  },
+
+  methods: {
+    getComponentFromSectionType(sectionType) {
+      if (sectionType == "magSection") {
+        return "SectionsMagazine";
+      } else if (sectionType == "faqSection") {
+        return "SectionsFaqSection";
+      } else if (sectionType == "ctaSection") {
+        return "SectionsCtaSection";
+      } else if (sectionType == "bigHeading") {
+        return "SectionsBigHeading";
+      }
+      return "SectionsDefault";
+    }
   }
 };
 </script>
