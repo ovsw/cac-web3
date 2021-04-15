@@ -3,30 +3,29 @@
   //   width: calc(100% / 3);
   // }
 
-  @include media-query('md') {
+  @include media-query("md") {
     tr td:nth-child(1) {
       width: 20%;
     }
-  
-    tr td:nth-child(2), tr td:nth-child(3) {
+
+    tr td:nth-child(2),
+    tr td:nth-child(3) {
       width: 40%;
     }
   }
 }
 
-
 /* Standard Tables */
 
 .tableSection {
-
   margin: var(--grid-space) 0;
 
   table {
     margin: 1em 0;
     border-collapse: collapse;
     border: 0.1em solid #d6d6d6;
-    
-    @include media-query('lg') {
+
+    @include media-query("lg") {
       width: 100%;
     }
   }
@@ -49,8 +48,8 @@
 
   th {
     vertical-align: bottom;
-    padding: calc(var(--grid-space) * 2) var(--grid-space)  ;
-    background-color: get-color('primary');
+    padding: calc(var(--grid-space) * 2) var(--grid-space);
+    background-color: green;
     color: #fff;
   }
 

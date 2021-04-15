@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --flow-space: 1.875rem;
+    --grid-space: 0.9375rem;
+  }
   body {
-    @apply font-body text-dark text-base leading-normal;
+    @apply font-body text-dark bg-light text-base leading-normal;
   }
 
   h1,
@@ -13,7 +17,7 @@
   }
 
   :focus {
-    outline: 2px dashed get-color("primary");
+    outline: 2px dashed green;
     outline-offset: 0.25rem;
   }
   main:focus {
@@ -21,7 +25,7 @@
   }
 
   ::selection {
-    @apply: text-light-light;
+    color: white;
     /* // We set this as an RGBA because that’s how you get a solid color, by using 0.99
     // alpha value. Browsers are wild. */
     background: rgba(54, 52, 46, 0.99);
@@ -105,5 +109,65 @@
     @apply text-base uppercase flex  tracking-wide font-bold
       p-4  w-full text-left
       md:p-2 md:text-sm lg:text-base focus:bg-green focus:text-light-light;
+  }
+  .pannel {
+    @apply p-10;
+  }
+  .pinned {
+    @apply absolute object-cover top-0 right-0 left-0 bottom-0 w-full h-full;
+  }
+  .subtitle {
+    @apply text-base font-bold tracking-wider uppercase leading-6;
+  }
+
+  .site-wrap {
+    /* // overflow-x: hidden; */
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .wrapper {
+    /* // was 70 originally */
+    max-width: 100rem;
+    padding: 0 0.9375rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+  }
+  .skip-link:not(:focus) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+  .footer__col h4 {
+    @apply uppercase tracking-widest mb-4 font-semibold;
+  }
+  .footer__col ul {
+    @apply space-y-3 lg:space-y-2;
   }
 }

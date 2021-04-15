@@ -1,10 +1,10 @@
 <template>
-  <section class="faqSection [ grid-margin ]">
-    <div class="[ wrapper grid-padding ]">
-      <div class="[ pannel frame-thick ]">
+  <section class="faqSection m-grd">
+    <div class="[ wrapper ]">
+      <div class="[ pannel border-green border-5 ]">
         <h2 class="faqSection__heading">{{ section.title }}</h2>
 
-        <dl class="[ flow ]">
+        <dl class="[ space-y-7 ]">
           <div
             v-for="(item, index) in section.faqItems"
             class="faqsWrapper"
@@ -57,35 +57,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.faqSection {
-  h3 {
-    margin-top: get-size("800");
-    margin-bottom: get-size("600");
-  }
+// .faqSection {
+//   h3 {
+//     margin-top: get-size("800");
+//     margin-bottom: get-size("600");
+//   }
 
-  dt {
-    display: block;
-  }
+//   dt {
+//     display: block;
+//   }
 
-  dt button {
-    cursor: pointer;
-    background: get-color("primary");
-    border: none;
-    color: get-color("light-glare");
-    padding: get-size("400") get-size("600");
-    padding-top: calc(#{get-size("400")} * 1.3);
+//   dt button {
+//     cursor: pointer;
+//     background: green;
+//     border: none;
+//     color: white;
+//     padding: get-size("400") get-size("600");
+//     padding-top: calc(#{get-size("400")} * 1.3);
 
-    display: block !important;
-    width: 100%;
-    text-align: left;
+//     display: block !important;
+//     width: 100%;
+//     text-align: left;
 
-    span {
-      float: right;
-    }
-  }
-}
+//     span {
+//       float: right;
+//     }
+//   }
+// }
 
-.faqSection__heading {
-  margin-bottom: get-size("700");
-}
+// .faqSection__heading {
+//   margin-bottom: get-size("700");
+// }
 </style>

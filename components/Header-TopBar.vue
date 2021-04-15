@@ -45,7 +45,10 @@
           />
           CAC Blog</a
         >
-        <a href="/" class="accented-link">
+        <a
+          href="/"
+          class="bg-red text-light no-underline uppercase font-semibold px-2"
+        >
           <!-- <svg-icon
             name="icon-question"
             title="newspaper icon"

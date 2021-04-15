@@ -45,7 +45,7 @@
             ' 2500w'
         "
       />
-        <!-- sizes="
+      <!-- sizes="
           (min-width: 1500px) 860px,
           100vw
         " -->
@@ -87,7 +87,7 @@
         lg:max-w-2xl lg:p-20   lg:my-0
         "
     >
-      <div class="flow">
+      <div class="space-y-7">
         <h2>{{ section.title }}</h2>
 
         <div class="magSection__subHeadingWrapper">
@@ -98,7 +98,7 @@
           <SanityContent
             :blocks="section.text"
             :serializers="serializers"
-            class="prose"
+            class="prose text-lg"
           />
         </div>
       </div>
@@ -163,7 +163,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba($color: get-color("dark"), $alpha: 0.5);
+  background-color: rgba(black, $alpha: 0.5);
   transition: all 0.5s;
   cursor: pointer;
 
@@ -188,7 +188,7 @@ export default {
   }
 
   &:hover {
-    background-color: rgba($color: get-color("primary"), $alpha: 0.8);
+    background-color: rgba($color: green, $alpha: 0.8);
     svg {
       transform: scale(1.1);
     }
@@ -196,7 +196,7 @@ export default {
 }
 
 // $sectionColors: (
-//   "green": get-color("primary"),
+//   "green": green,
 //   "blue": get-color("secondary"),
 //   "red": get-color("accent"),
 //   "yellow": get-color("tertiary")
@@ -224,7 +224,7 @@ export default {
 //     &[data-theme="fill"][data-theme-color="#{$name}"] {
 //       .magSection__content {
 //         background-color: $color;
-//         color: get-color("light-glare");
+//         color: white;
 //       }
 //     }
 //     &[data-theme="fill"][data-theme-color="yellow"] {
@@ -297,7 +297,7 @@ export default {
 //     display: flex;
 //     justify-content: center;
 //     align-items: center;
-//     background-color: rgba($color: get-color("dark"), $alpha: 0.5);
+//     background-color: rgba(black, $alpha: 0.5);
 //     transition: all 0.5s;
 //     cursor: pointer;
 
@@ -308,7 +308,7 @@ export default {
 //     }
 
 //     &:hover {
-//       background-color: rgba($color: get-color("primary"), $alpha: 0.8);
+//       background-color: rgba($color: green, $alpha: 0.8);
 //       svg {
 //         transform: scale(1.1);
 //       }

@@ -1,27 +1,27 @@
 <<template>
-  <section class="[ ctaSection ]" data-theme-color="green" data-theme="dark">
-    <!-- {% if section.image.asset %}
-      {% responsiveImage section.image, 
-      "500, 1200, 1600", 
-      "(min-width: 40em) 70vw, 100vw",
-      "[ bgImage bgImage--gray bgImage--withOverlay ]",
-      imageAlt
-    %}
-    {% endif %} -->
-
+  <section
+    class="[ ctaSection ]  p-grd my-grd bg-green text-light"
+    data-theme-color="green"
+    data-theme="dark"
+  >
     <div class="[ ctaSection__color-overlay ] [ pinned ]"></div>
 
     <div class="[ wrapper ]">
-      <div class="[ ctaSection__content ] [ pannel ]">
-        <div class="ctaSection__leftColumn [ flow ]">
+      <div
+        class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 2xl:mx-grd "
+      >
+        <div class="ctaSection__leftColumn [ space-y-7 ]">
           <h2>{{ section.title }}</h2>
 
           <div v-if="section.subtitle" class="ctaSection__subHeadingWrapper">
             <h3 class="subtitle">{{ section.subtitle }}</h3>
           </div>
 
-          <div v-if="section.text" class="ctaSection__rteWrapper [ flow ]">
-            <SanityContent :blocks="section.text" />
+          <div v-if="section.text" class="ctaSection__rteWrapper [ space-y-7 ]">
+            <SanityContent
+              :blocks="section.text"
+              class=" max-w-prose text-light text-lg"
+            />
           </div>
         </div>
 
@@ -49,94 +49,80 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$sectionColors: (
-  "green": get-color("primary"),
-  "blue": get-color("secondary"),
-  "red": get-color("accent"),
-  "yellow": get-color("tertiary")
-);
+// .ctaSection {
+//   position: relative;
+//   margin: var(--grid-space) 0;
+//   padding: var(--grid-space) 0;
 
-.ctaSection {
-  position: relative;
-  margin: var(--grid-space) 0;
-  padding: var(--grid-space) 0;
+//   &__image img {
+//     // pinned
 
-  &__image img {
-    // pinned
+//     -webkit-filter: grayscale(100%);
+//     -moz-filter: grayscale(100%);
+//     -ms-filter: grayscale(100%);
+//     -o-filter: grayscale(100%);
+//     filter: gray;
+//     z-index: 10;
+//     opacity: 15%;
+//   }
+//   &__color-overlay {
+//     z-index: 5;
+//   }
 
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: gray;
-    z-index: 10;
-    opacity: 15%;
-  }
-  &__color-overlay {
-    // background-color: get-color('secondary');
-    z-index: 5;
+//   &__content {
+//     position: relative;
+//     z-index: 20;
 
-    @each $name, $color in $sectionColors {
-      section[data-theme-color="#{$name}"] & {
-        background-color: $color;
-      }
-    }
-  }
+//     section[data-theme="dark"] & {
+//       color: white;
+//       border: 3px solid rgba($color: white, $alpha: 0.5);
+//     }
+//     section[data-theme="light"] & {
+//       color: black;
+//       border: 5px solid rgba(black, $alpha: 0.5);
+//     }
 
-  &__content {
-    position: relative;
-    z-index: 20;
+//     > * + * {
+//       margin-top: var(--flow-space);
+//     }
 
-    section[data-theme="dark"] & {
-      color: get-color("light-glare");
-      border: 3px solid rgba($color: get-color("light-glare"), $alpha: 0.5);
-    }
-    section[data-theme="light"] & {
-      color: get-color("dark");
-      border: 5px solid rgba($color: get-color("dark"), $alpha: 0.5);
-    }
+//     @include media-query("lg") {
+//       display: flex;
+//       align-items: center;
+//     }
 
-    > * + * {
-      margin-top: var(--flow-space);
-    }
+//     h2,
+//     h3 {
+//       font-size: get-size("700");
+//       @include media-query("md") {
+//         font-size: get-size("800");
+//       }
+//     }
 
-    @include media-query("lg") {
-      display: flex;
-      align-items: center;
-    }
+//     .subtitle {
+//       @include media-query("lg") {
+//         font-size: 28px !important;
+//       }
+//     }
 
-    h2,
-    h3 {
-      font-size: get-size("700");
-      @include media-query("md") {
-        font-size: get-size("800");
-      }
-    }
+//     a {
+//       text-decoration-color: currentColor;
+//     }
+//   }
 
-    .subtitle {
-      @include media-query("lg") {
-        font-size: 28px !important;
-      }
-    }
+//   &__leftColumn {
+//     flex: 2;
+//     @include media-query("lg") {
+//       padding-right: calc(var(--grid-space) * 2);
+//     }
+//   }
 
-    a {
-      text-decoration-color: currentColor;
-    }
-  }
+//   &__rightColumn {
+//     flex: 0 1 auto;
+//   }
+// }
 
-  &__leftColumn {
-    flex: 2;
-    @include media-query("lg") {
-      padding-right: calc(var(--grid-space) * 2);
-    }
-  }
-
-  &__rightColumn {
-    flex: 0 1 auto;
-  }
-}
-
-.bigHeadingSection + .ctaSection {
-  margin-top: 0 !important;
-}
+// .bigHeadingSection + .ctaSection {
+//   margin-top: 0 !important;
+// }
 </style>

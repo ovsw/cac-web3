@@ -70,7 +70,10 @@ module.exports = {
         "160": "40rem"
       },
       borderWidth: {
-        "5": "6px"
+        "5": "5px"
+      },
+      borderRadius: {
+        large: "50px"
       }
       // maxWidth: {
       //   'content': '1600px'

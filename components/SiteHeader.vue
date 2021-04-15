@@ -53,14 +53,14 @@ export default {
   z-index: 500;
   & img {
     width: 90px;
-    @include media-query("md") {
-      width: 200px;
-    }
   }
 }
 @media screen and (min-width: 768px) {
   .logo {
     transform: translateX(-110px);
+  }
+  .logo img {
+    width: 200px;
   }
 }
 </style>

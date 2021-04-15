@@ -1,29 +1,42 @@
 <template>
-  <footer class="footer">
-    <div class="wrapper">
-      <div class="footer__grid [ flow ]">
-        <div class="footer__logos">
+  <footer class="footer footer bg-green text-light pt-20">
+    <div class="container mx-auto px-4 md:px-6 pb-10">
+      <div
+        class="footer__grid space-y-7 md:grid gap-5 md:grid-cols-3 lg:grid-cols-5 md:space-y-0 "
+      >
+        <div
+          class="footer__logos flex space-x-6 items-center  col-span-1 lg:col-span-2 self-center"
+        >
           <img
+            class=" w-32"
             height="100"
             src="~/assets/images/logos/ontario-camp-association-accredited-member-badge.png"
             alt="Ontario Camp Association Accredited Member Badge"
           />
           <img
+            class="w-32"
             height="100"
             src="~/assets/images/logos/amici-camping-charity-logo.png"
             alt="Amici Camping Charity"
           />
         </div>
 
-        <SocialLinks wrapperClass="footer__social-wrapper" />
-
-        <div class="footer__phone">
+        <!-- phone -->
+        <div class="footer__phone self-center lg:col-span-2">
           <a href="tel:1-800-966-1406"
-            ><span>Call us</span><br /><span>1 (800) 966-1406</span></a
+            ><span class="uppercase tracking-wider">Call us</span>
+            <br />
+            <span class="text-3xl">tel:1-800-966-1406</span></a
           >
         </div>
+        <!-- social -->
+        <ul class="footer__social-wrapper text-4xl self-center text-center">
+          <SocialLinks />
+        </ul>
 
-        <div class="footer__address [ flow ]">
+        <div
+          class="footer__address footer__address space-y-3 md:col-span-2 py-6 text-light"
+        >
           <p class="text-600">Canadian Adventure Camp</p>
           <p>[SEO text here]</p>
           <p>
@@ -103,19 +116,18 @@
         </div>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="wrapper footer__bottom-content">
-        <p>
-          ©2014-2021 Canadian Adventure Camp, Inc. All Rights Reserved. |
-          Website by:
-          <a
-            href="https://studiorovst.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Studio Rovst</a
-          >
-        </p>
-      </div>
+
+    <div class="footer__bottom bg-green-dark p-4 md:text-center text-sm">
+      <p>
+        ©2014-2021 Canadian Adventure Camp, Inc. All Rights Reserved. | Website
+        by:
+        <a
+          href="https://studiorovst.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Studio Rovst</a
+        >
+      </p>
     </div>
   </footer>
 </template>
@@ -124,182 +136,4 @@
 export default {};
 </script>
 
-<style lang="scss">
-.footer {
-  padding-top: get-size("900");
-  color: get-color("light-glare");
-  font-size: get-size("400");
-  background-color: get-color("primary-shade");
-
-  & a {
-    text-decoration-color: get-color("light") !important;
-    color: get-color("light") !important;
-    &:focus {
-      outline: 2px dashed get-color("light") !important;
-    }
-  }
-
-  &__grid {
-    @include media-query("md") {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: var(--flow-space);
-      padding-left: 1.875rem;
-    }
-
-    @include media-query("lg") {
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      grid-template-rows: min-content min-content;
-      gap: var(--flow-space);
-      grid-template-areas:
-        "logos social social phone"
-        "address nav1 nav2 nav3";
-    }
-  }
-
-  p {
-    color: get-color("light-glare");
-  }
-
-  &__logos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    & img:first-child {
-      margin-right: get-size("400");
-    }
-
-    @include media-query("md") {
-      grid-row: 1;
-      grid-column: 1 / span 2;
-      & img:first-child {
-        margin-right: get-size("800");
-      }
-    }
-  }
-
-  &__address {
-    @include media-query("md") {
-      grid-row: 2;
-      grid-column: 1 / span 1;
-    }
-
-    @include media-query("lg") {
-      grid-area: address;
-    }
-
-    p {
-      @include media-query("md") {
-        max-width: 20rem;
-      }
-    }
-  }
-
-  &__social-wrapper {
-    padding-top: get-size("600") !important;
-    display: flex;
-    align-items: center;
-
-    @include media-query("md") {
-      grid-row: 2;
-      grid-column: 3;
-    }
-
-    @include media-query("lg") {
-      grid-area: social;
-    }
-
-    li {
-      padding-inline-end: get-size("400");
-    }
-
-    li:hover {
-      transform: scale(1.1);
-      transition: 0.1s;
-    }
-
-    a {
-      font-size: get-size("700");
-      color: get-color("light-glare");
-      display: block;
-
-      svg {
-        display: block;
-      }
-    }
-  }
-
-  &__phone {
-    @include media-query("md") {
-      margin-top: 0 !important;
-    }
-
-    br {
-      display: none;
-      @include media-query("md") {
-        display: inline;
-      }
-    }
-
-    & span:first-child {
-      margin-right: get-size("400");
-    }
-
-    & span:nth-child(3) {
-      @include media-query("md") {
-        font-size: get-size("600") !important;
-      }
-    }
-  }
-
-  &__col {
-    h4 {
-      @extend .font-base;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      margin-top: get-size("400");
-    }
-
-    li {
-      margin-top: get-size("200");
-    }
-
-    > div {
-      margin-top: get-size("600");
-    }
-  }
-
-  &__bottom {
-    padding: get-size("500") 0;
-    margin-top: get-size("600");
-    background-color: get-color("primary");
-    font-size: get-size("330");
-
-    @include media-query("md") {
-      margin-top: get-size("xl");
-    }
-
-    &-content {
-      @include media-query("md") {
-        text-align: center;
-      }
-    }
-
-    & .signature {
-      margin-top: get-size("400");
-      @include media-query("md") {
-        margin-top: 0;
-      }
-    }
-  }
-}
-</style>
+<style lang="scss"></style>
