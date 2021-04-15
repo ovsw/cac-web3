@@ -104,6 +104,6 @@
   .nav__item > a {
     @apply text-base uppercase flex  tracking-wide font-bold
       p-4  w-full text-left
-      md:p-4 focus:bg-green focus:text-light-light;
+      md:p-2 md:text-sm lg:text-base focus:bg-green focus:text-light-light;
   }
 }
