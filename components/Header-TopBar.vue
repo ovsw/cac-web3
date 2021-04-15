@@ -1,8 +1,8 @@
 <template>
   <div class="site-head__topbar text-sm bg-green text-light">
     <div class="wrapper flex justify-between items-center">
-      <div class="md:space-x-4">
-        <a href="tel:1-800-966-1406" class="flex items-center">
+      <div class="sm:space-x-4">
+        <a href="tel:1-800-966-1406" class="inline-flex items-center">
           <svg-icon
             name="icon-phone"
             title="phone icon"
@@ -12,17 +12,17 @@
           />
           1 (800) 966-1406
         </a>
-        <a href="/" class="hidden md:inline"
+        <a href="/" class="hidden sm:inline-flex items-center"
           ><svg-icon
             name="icon-calendar"
             title="calendar icon"
             height="1em"
             width="1em"
-            class="hidden lg:inline"
+            class="hidden sm:inline"
           />
           Dates &amp; Rates</a
         >
-        <a href="/" class="hidden lg:inline"
+        <a href="/" class="hidden lg:inline-flex items-center"
           ><svg-icon
             name="icon-question"
             title="question mark icon"
