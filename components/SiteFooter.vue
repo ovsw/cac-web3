@@ -7,18 +7,22 @@
         <div
           class="footer__logos flex space-x-6 items-center  col-span-1 lg:col-span-2 self-center"
         >
-          <img
-            class=" w-32"
-            height="100"
-            src="~/assets/images/logos/ontario-camp-association-accredited-member-badge.png"
-            alt="Ontario Camp Association Accredited Member Badge"
-          />
-          <img
-            class="w-32"
-            height="100"
-            src="~/assets/images/logos/amici-camping-charity-logo.png"
-            alt="Amici Camping Charity"
-          />
+          <a href="https://ontariocampsassociation.ca/" rel="noopener">
+            <img
+              class=" w-32"
+              height="100"
+              src="~/assets/images/logos/ontario-camp-association-accredited-member-badge.png"
+              alt="Ontario Camp Association Accredited Member Badge"
+            />
+          </a>
+          <a href="https://www.amicicharity.org/" rel="noopener">
+            <img
+              class="w-32"
+              height="100"
+              src="~/assets/images/logos/amici-camping-charity-logo.png"
+              alt="Amici Camping Charity"
+            />
+          </a>
         </div>
 
         <!-- phone -->
