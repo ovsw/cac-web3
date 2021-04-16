@@ -2,7 +2,6 @@
   <div class="wrapper py-20 max-w-screen-xl">
     <SanityContent
       :blocks="page.content.body"
-      :serializers="serializers"
       class="prose text-lg max-w-screen-xl"
     />
   </div>
