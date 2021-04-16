@@ -2,12 +2,15 @@
   <div class="wrapper py-20 max-w-screen-xl">
     <SanityContent
       :blocks="page.content.body"
+      :serializers="serializers"
       class="prose text-lg max-w-screen-xl"
     />
   </div>
 </template>
 
 <script>
+import iframe from "@/components/serializers/iframe";
+
 export default {
   props: {
     page: {
@@ -24,7 +27,7 @@ export default {
         // },
         // TODO: form serializer
         types: {
-          iframeEmbed: () => "embedded form"
+          iframeEmbed: iframe
         }
       }
     };
