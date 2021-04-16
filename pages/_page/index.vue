@@ -5,8 +5,6 @@
       :image="pageHeaderImage"
       :narrow="page._type == 'pageSimple' ? true : false"
     />
-    {{ pageContent }}
-
     <!-- if normal page, show content sections -->
     <template v-if="page._type == 'page'">
       <component
