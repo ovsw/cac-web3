@@ -138,6 +138,6 @@ export default {};
 
 <style lang="scss" scoped>
 .footer a:focus {
-  outline: 2px dashed white;
+  outline: 2px dashed white !important;
 }
 </style>
