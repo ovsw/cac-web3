@@ -2,10 +2,9 @@
   <article>
     <page-header
       :title="page.content.title"
-      :image="page.content.headerImage"
+      :image="pageHeaderImage"
       :narrow="page._type == 'pageSimple' ? true : false"
     />
-
     <!-- if normal page, show content sections -->
     <template v-if="page._type == 'page'">
       <component
@@ -82,7 +81,13 @@ export default {
       }
     };
   },
-
+  computed: {
+    pageHeaderImage() {
+      return this.page._type == "pageSimple"
+        ? this.page.content.image
+        : this.page.content.headerImage;
+    }
+  },
   methods: {
     getComponentFromSectionType(sectionType) {
       if (sectionType == "magSection") {
