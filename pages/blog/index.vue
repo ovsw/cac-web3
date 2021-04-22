@@ -1,6 +1,9 @@
 <template>
   <div>
-    <PageHeader />
+    <PageHeader
+      :title="blogHome.content.title"
+      :image="blogHome.content.headerImage"
+    />
     <section>
       <div class="container mx-auto">
         <CardGridWrapper>
@@ -11,6 +14,7 @@
             :date="post.content.publishedAt"
             :image="post.content.image"
             :description="post.content.excerpt"
+            headingLvl="2"
             :url="`/blog/${post.content.slug.current}/`"
           />
         </CardGridWrapper>
@@ -21,7 +25,8 @@
 
 <script>
 const query = /* groq */ `{
-  "posts": *[_type == 'post' && (content.publishedAt < now())] | order(content.publishedAt asc)
+  "posts": *[_type == 'post' && (content.publishedAt < now())] | order(content.publishedAt asc),
+  "blogHome": *[ _id == 'blogHome'][0]
 }`;
 
 export default {

@@ -67,4 +67,9 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+a:focus {
+  outline: 2px dashed white !important;
+  outline-offset: -1px 0.5rem !important;
+}
+</style>

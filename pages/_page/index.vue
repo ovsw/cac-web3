@@ -7,12 +7,7 @@
     />
     <!-- if normal page, show content sections -->
     <template v-if="page._type == 'page'">
-      <component
-        v-for="section in page.content.sections"
-        :is="getComponentFromSectionType(section._type)"
-        :key="section._key"
-        :section="section"
-      />
+      <SectionsRenderer :sections="page.content.sections" />
     </template>
 
     <!-- if simple page, show body -->
@@ -78,20 +73,6 @@ export default {
       return this.page._type == "pageSimple"
         ? this.page.content.image
         : this.page.content.headerImage;
-    }
-  },
-  methods: {
-    getComponentFromSectionType(sectionType) {
-      if (sectionType == "magSection") {
-        return "SectionsMagazine";
-      } else if (sectionType == "faqSection") {
-        return "SectionsFaqSection";
-      } else if (sectionType == "ctaSection") {
-        return "SectionsCtaSection";
-      } else if (sectionType == "bigHeading") {
-        return "SectionsBigHeading";
-      }
-      return "SectionsDefault";
     }
   }
 };

@@ -25,7 +25,7 @@
     >
       <div
         class="[ wrapper ] z-10 relative lg:mt-36"
-        :class="{ 'max-w-screen-xl': narrow }"
+        :class="{ 'max-w-screen-lg': narrow, '-inset-x-10': narrow }"
       >
         <div
           class="page-header__content bg-light inline-block p-14 rounded-tr-large"
@@ -58,18 +58,18 @@ export default {
 
 <style lang="scss" scoped>
 .page-header {
-  &::before {
-    background-color: #000;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-    z-index: 1;
-  }
+  // &::before {
+  //   background-color: #000;
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   opacity: 0.3;
+  //   z-index: 1;
+  // }
 }
 // .page-header {
 //   background-size: cover;

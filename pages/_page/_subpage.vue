@@ -7,12 +7,7 @@
     />
     <!-- if normal page, show content sections -->
     <template v-if="page._type == 'page'">
-      <component
-        v-for="section in page.content.sections"
-        :is="getComponentFromSectionType(section._type)"
-        :key="section._key"
-        :section="section"
-      />
+      <SectionsRenderer :sections="page.content.sections" />
     </template>
 
     <!-- if simple page, show body -->

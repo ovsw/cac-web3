@@ -3,18 +3,21 @@
     class="card  bg-white transition-transform flex flex-col shadow-md rounded-tr-3xl relative hover:shadow-lg"
   >
     <div class="order-2 p-4 flex-1 flex flex-col">
-      <h3 class="">
+      <component
+        :is="`h${headingLvl}`"
+        class="text-lg normal-case font-body font-normal"
+      >
         <NuxtLink
           :to="url"
           class="cardLink"
           aria-describedby="${title}-ride` | slugify"
         >
-          <span class="block text-xl font-bold font-display mb-3">
+          <span class="block text-xl font-bold  mb-4">
             {{ title }}
           </span>
 
           <span class="flex space-x-2 items-baseline">
-            <span v-if="date" class="pill text-gray-500 mb-4">
+            <span v-if="date" class="pill text-gray-500 mb-4 text-base">
               {{ date | formatDateYear }}
             </span>
             <template v-if="tags.length">
@@ -28,7 +31,8 @@
             </template>
           </span>
         </NuxtLink>
-      </h3>
+      </component>
+
       <p v-if="description" class=" text-muted mb-4">
         {{ description }}
       </p>
@@ -58,6 +62,10 @@ export default {
     title: {
       type: String,
       default: "missing title"
+    },
+    headingLvl: {
+      type: String,
+      default: "3"
     },
     tags: {
       type: Array,

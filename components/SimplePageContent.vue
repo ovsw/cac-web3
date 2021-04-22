@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper py-20 max-w-screen-xl">
+  <div class="wrapper py-20 max-w-screen-lg">
     <SanityContent
       :blocks="page.content.body"
       :serializers="serializers"
-      class="prose text-lg max-w-screen-xl"
+      class="prose prose-xl max-w-screen-lg px-4"
     />
   </div>
 </template>
