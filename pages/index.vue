@@ -10,14 +10,14 @@ const query = /* groq */ `{
     ...
   }[0]
 }
-`
+`;
 
 export default {
-  name: 'siteHome',
+  name: "siteHome",
   asyncData({ $sanity }) {
-    const sanityCall = $sanity.fetch(query)
-    console.log('🎈 asyncData: called', sanityCall )
-    return sanityCall
-  },
-}
+    const sanityCall = $sanity.fetch(query);
+    // console.log('🎈 asyncData: called', sanityCall )
+    return sanityCall;
+  }
+};
 </script>

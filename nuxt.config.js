@@ -53,6 +53,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    "~plugins/filters.js",
     "~plugins/sanity.js",
     "~plugins/preview.client.js",
     "~plugins/image-builder.js",
@@ -90,6 +91,7 @@ export default {
   styleResources: {
     // your settings here
     scss: ["assets/scss/_gorko.scss"]
+    // TODO: remove gorko config scss
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

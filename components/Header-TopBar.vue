@@ -35,7 +35,7 @@
       </div>
 
       <div class="md:space-x-4">
-        <a href="/" class="hidden md:inline-block">
+        <NuxtLink to="/blog/" class="hidden md:inline-block">
           <svg-icon
             name="icon-newspaper"
             title="newspaper icon"
@@ -43,7 +43,7 @@
             height="1em"
             class="inline"
           />
-          CAC Blog</a
+          CAC Blog</NuxtLink
         >
         <a
           href="https://canadianadventurecamp.campbrainregistration.com/?ReturnUrl=%2FHome%2FLanding"
