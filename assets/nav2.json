@@ -44,7 +44,7 @@
             "name": "Testimonials",
             "description": "from our families",
             "new": false,
-            "url": "/testimoanials/",
+            "url": "/testimonials/",
             "icon": "comments-duotone"
           }
         ]
