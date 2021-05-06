@@ -1,6 +1,13 @@
 <template>
   <div>
-    Homepage
+    <Hero
+      eyebrow="Welcome to"
+      title="Canadian Adventure Camp"
+      :image="siteHome.content.hero.image"
+      buttonText="Our Programs"
+    />
+
+    <SectionsRenderer :sections="siteHome.content.sections" />
   </div>
 </template>
 
