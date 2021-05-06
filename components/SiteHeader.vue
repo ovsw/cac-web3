@@ -12,7 +12,7 @@
     <div class="">
       <div class="site-head__inner flex md:block">
         <!-- x-data="{ mainMenuisOpen: false }" -->
-        <a class="logo md:absolute flex md:block items-center" href="/">
+        <NuxtLink class="logo md:absolute flex md:block items-center" to="/">
           <img
             class="hidden md:block"
             src="~/assets/images/logos/canadian-adventure-camp-logo.png"
@@ -30,7 +30,7 @@
             />
             <span class="block"> Canadian Adventure Camp</span>
           </span>
-        </a>
+        </NuxtLink>
 
         <Header-Nav />
       </div>

@@ -41,7 +41,7 @@
         <div
           class="footer__address footer__address space-y-3 md:col-span-2 py-6 text-light"
         >
-          <p class="text-600">Canadian Adventure Camp</p>
+          <p class="text-2xl font-semibold ">Canadian Adventure Camp</p>
           <p>[SEO text here]</p>
           <p>
             <a href="mailto:info@canadianadventurecamp.com"
