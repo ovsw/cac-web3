@@ -18,7 +18,9 @@
 
           <span class="flex space-x-2 items-baseline">
             <span v-if="date" class="pill text-gray-500 mb-4 text-base">
-              {{ date | formatDateYear }}
+              {{ date | formatDateYear }}</span
+            ><span v-if="author" class="pill text-gray-500 mb-4 text-base"
+              >&middot; by {{ author }}
             </span>
             <template v-if="tags.length">
               <span
@@ -83,6 +85,9 @@ export default {
     url: {
       type: String,
       default: "/"
+    },
+    author: {
+      type: String
     }
   },
   methods: {

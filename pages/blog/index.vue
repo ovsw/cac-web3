@@ -15,6 +15,7 @@
             :image="post.content.image"
             :description="post.content.excerpt"
             headingLvl="2"
+            :author="post.content.authorName"
             :url="`/blog/${post.content.slug.current}/`"
           />
         </CardGridWrapper>
@@ -25,7 +26,13 @@
 
 <script>
 const query = /* groq */ `{
-  "posts": *[_type == 'post' && (content.publishedAt < now())] | order(content.publishedAt asc),
+  "posts": *[_type == 'post' && (content.publishedAt < now())] {
+    ...,
+    content {
+      ...,
+      "authorName": author->name
+    }
+  } | order(content.publishedAt asc),
   "blogHome": *[ _id == 'blogHome'][0]
 }`;
 
