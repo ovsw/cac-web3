@@ -34,6 +34,10 @@ export default {
         return "SectionsBigHeading";
       } else if (sectionType == "reusedSection") {
         return "SectionsReused";
+      } else if (sectionType == "testimonialsSection") {
+        return "SectionsTestimonials";
+      } else if (sectionType == "testimonialSection") {
+        return "SectionsTestimonial";
       }
       return "SectionsDefault";
     }
