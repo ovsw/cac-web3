@@ -5,6 +5,7 @@
       :image="page.content.image"
       :narrow="true"
     />
+
     <SimplePageContent :page="page" />
   </article>
 </template>
@@ -12,7 +13,14 @@
 <script>
 import externalLink from "@/components/serializers/externalLink";
 
-const query = /* groq */ `{ "page": *[_type == 'post' && content.slug.current == $slug] | order(_updatedAt desc)[0]}`;
+const query = /* groq */ `{ "page": *[_type == 'post' && content.slug.current == $slug] 
+  {
+    ...,
+    content {
+      ...,
+      "authorName": author->name
+    }
+  } | order(_updatedAt desc)[0]}`;
 
 export default {
   name: "NewsItemPage",
