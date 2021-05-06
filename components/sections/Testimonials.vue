@@ -2,13 +2,14 @@
   <div class="section my-grd">
     <BorderPanel>
       <h2 class="mt-4 mb-8 md:mb-16">{{ section.title }}</h2>
-      <ul class="grid grid-cols-3 gap-5">
+      <!-- grid grid-cols-3 gap-5 -->
+      <ul class="flex">
         <li
           v-for="item in section.testimonialsList"
           :key="item._key"
-          class="p-6"
+          class="p-6 flex-1"
         >
-          <blockquote class="relative">
+          <blockquote class="relative text-xl">
             <span class="text-3xl w-6 inline-block"></span>
             <svg
               class="absolute top-0 left-0 transform -translate-x-6 -translate-y-6 h-10 w-10 text-green opacity-50"

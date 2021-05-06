@@ -38,6 +38,12 @@ const query = /* groq */ `{ "page": *[_type == 'page' && content.slug.current ==
             ...
           }
         },
+        _type == 'testimonialSection' => {
+          ...,
+          testimonial->{
+            ...
+          }
+        },
         reusableSection->{
           ...
         }
