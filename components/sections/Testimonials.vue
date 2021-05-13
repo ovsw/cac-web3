@@ -7,7 +7,7 @@
         >
           <h2 class="mt-4 mb-8 md:mb-16">{{ section.title }}</h2>
           <!-- grid grid-cols-3 gap-5 -->
-          <ul class="flex">
+          <ul class="md:flex">
             <li
               v-for="item in section.testimonialsList"
               :key="item._key"
