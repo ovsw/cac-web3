@@ -2,7 +2,7 @@
   <div class="site-head__topbar text-sm bg-green text-light">
     <div class="wrapper flex justify-between items-center">
       <div class="sm:space-x-4">
-        <a href="tel:1-800-966-1406" class="inline-flex items-center">
+        <a href="tel:905-886-1406" class="inline-flex items-center">
           <svg-icon
             name="icon-phone"
             title="phone icon"
@@ -10,7 +10,7 @@
             width="1em"
             class=""
           />
-          1 (800) 966-1406
+          905-886-1406
         </a>
         <a href="/dates-and-rates/" class="hidden sm:inline-flex items-center"
           ><svg-icon

@@ -27,10 +27,10 @@
 
         <!-- phone -->
         <div class="footer__phone self-center lg:col-span-2">
-          <a href="tel:1-800-966-1406"
+          <a href="tel:905-886-1406"
             ><span class="uppercase tracking-wider">Call us</span>
             <br />
-            <span class="text-3xl">tel:1-800-966-1406</span></a
+            <span class="text-3xl">905-886-1406</span></a
           >
         </div>
         <!-- social -->
