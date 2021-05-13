@@ -106,8 +106,14 @@ export default {
     fallback: true,
     crawler: false,
     async routes() {
-      const pages = await client.fetch(`*[_type == "page"]`);
-      const posts = await client.fetch(`*[_type == "post"]`);
+      const pages = await client.fetch(/* groq */ `*[_type == "page"]`);
+      const posts = await client.fetch(/* groq */ `*[_type == "post"]{
+        ...,
+        content {
+          ...,
+          "authorName": author->name
+        }
+      }`);
       const pagesSimple = await client.fetch(`*[_type == "pageSimple"]`);
 
       return [
