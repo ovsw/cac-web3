@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto border-5 border-green p-10 md:p-20">
+  <div class="wrapper mx-auto border-5 border-green p-10 md:p-20 w-full">
     <slot></slot>
   </div>
 </template>

@@ -80,11 +80,11 @@
         flex-1
         border-4 border-green
 
-        m-grd p-6 space-y-6
+        my-grd p-6 space-y-6
 
-        md:border-5 md:p-10 
+        md:border-5 md:p-10 md:ml-grd
         
-        lg:max-w-2xl lg:p-20   lg:my-0
+        lg:max-w-2xl lg:p-20 lg:my-0 2xl:mr-grd
         "
     >
       <div class="space-y-7">
