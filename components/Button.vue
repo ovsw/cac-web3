@@ -1,6 +1,6 @@
 <template>
   <component v-bind="linkProps(url)" class="button">
-    <slot></slot> {{ cleanUrl(url) }}
+    <slot></slot>
     <svg-icon
       name="icon-chevron-right-light"
       title="chevron right icon"
