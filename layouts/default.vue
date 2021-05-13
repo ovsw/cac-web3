@@ -12,9 +12,9 @@
     </client-only>
     <!-- <div :class="[$store.state.showDrafPreviewBanner == true ? 'bodyPreviewActive' : '', 'site-wrap']"> -->
 
-    <site-header />
+    <SiteHeader />
     <Nuxt />
-    <site-footer />
+    <SiteFooter />
     <!-- </div> -->
   </div>
 </template>
