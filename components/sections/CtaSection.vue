@@ -4,7 +4,7 @@
     data-theme-color="green"
     data-theme="dark"
   >
-    <div class="[ ctaSection__color-overlay ] [ pinned ]"></div>
+    <!-- <div class="[ ctaSection__color-overlay ] [ pinned ]"></div> -->
 
     <div class="[ wrapper ]">
       <div
