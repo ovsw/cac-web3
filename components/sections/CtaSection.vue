@@ -27,9 +27,11 @@
 
         <div v-if="section.buttons" class="ctaSection__rightColumn cluster-l">
           <div v-for="button in section.buttons">
-            <a :href="button.url" class="[ button button--outline-light ]">{{
-              button.text
-            }}</a>
+            <a
+              :href="`/${button.url}/`"
+              class="[ button button--outline-light ]"
+              >{{ button.text }}</a
+            >
           </div>
         </div>
       </div>

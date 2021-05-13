@@ -1,6 +1,6 @@
 <template>
   <component v-bind="linkProps(url)" class="button">
-    <slot></slot>
+    <slot></slot> {{ cleanUrl(url) }}
     <svg-icon
       name="icon-chevron-right-light"
       title="chevron right icon"
@@ -19,6 +19,9 @@ export default {
     }
   },
   methods: {
+    cleanUrl(url) {
+      return url.replace(/\/\//g, "/");
+    },
     linkProps(url) {
       if (url.match(/^(http(s)?|ftp):\/\//)) {
         return {
@@ -30,7 +33,7 @@ export default {
       }
       return {
         is: "router-link",
-        to: `/${url}/`
+        to: this.cleanUrl(url)
       };
     }
   }
