@@ -12,7 +12,7 @@
             :key="post._key"
             :title="post.content.title"
             :date="post.content.publishedAt"
-            :image="post.content.image"
+            :image="post.content.image ? post.content.image : {}"
             :description="post.content.excerpt"
             headingLvl="2"
             :author="post.content.authorName"
@@ -32,7 +32,7 @@ const query = /* groq */ `{
       ...,
       "authorName": author->name
     }
-  } | order(content.publishedAt asc),
+  } | order(content.publishedAt desc),
   "blogHome": *[ _id == 'blogHome'][0]
 }`;
 

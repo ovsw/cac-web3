@@ -47,6 +47,7 @@
       </p>
     </div>
     <img
+      v-if="Object.entries(image).length > 0"
       :src="
         $urlFor(image)
           .width(400)
