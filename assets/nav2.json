@@ -142,7 +142,7 @@
             "name": "Photos & Videos",
             "description": "take a look around",
             "new": false,
-            "url": "/photo-gallery/",
+            "url": "/photos-and-videos/",
             "icon": "camera-retro-duotone"
           }
         ]
