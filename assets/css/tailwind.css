@@ -79,12 +79,16 @@
   .magSection:nth-child(even) .magSection__content {
     @apply md:ml-0 md:mr-grd;
   } */
-  .magSection + .magSection:nth-child(odd) {
+  .magSection + .magSection:nth-child(even) {
     /* background-color: red !important; */
     flex-direction: row-reverse !important;
+    @apply 2xl:pr-grd;
   }
-  .magSection + .magSection:nth-child(odd) .magSection__image {
-    @apply 2xl:ml-0 2xl:mr-grd;
+  .magSection + .magSection:nth-child(even) .magSection__content {
+    @apply ml-0 mr-grd 2xl:mr-0 2xl:ml-grd;
+  }
+  .magSection + .magSection:nth-child(even) .magSection__image {
+    @apply 2xl:mr-grd;
   }
 }
 
