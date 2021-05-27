@@ -163,7 +163,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(black, $alpha: 0.5);
+  background-color: rgba(black, $alpha: 0.4);
   transition: all 0.5s;
   cursor: pointer;
 
@@ -188,7 +188,7 @@ export default {
   }
 
   &:hover {
-    background-color: rgba($color: green, $alpha: 0.8);
+    background-color: rgba($color: #527033, $alpha: 0.8);
     svg {
       transform: scale(1.1);
     }
