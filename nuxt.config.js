@@ -106,7 +106,36 @@ export default {
     fallback: true,
     crawler: false,
     async routes() {
-      const pages = await client.fetch(/* groq */ `*[_type == "page"]`);
+      const pages = await client.fetch(/* groq */ `*[_type == "page"] {
+        ...,
+        content {
+          ...,
+          sections[] {
+              ...,
+              _type == 'faqSection' => {
+                ...,
+                faqItems[]->{
+                  ...
+                }
+              },
+              _type == 'testimonialsSection' => {
+                ...,
+                testimonialsList[]->{
+                  ...
+                }
+              },
+              _type == 'testimonialSection' => {
+                ...,
+                testimonial->{
+                  ...
+                }
+              },
+              reusableSection->{
+                ...
+              }
+            }
+        }
+      }`);
       const posts = await client.fetch(/* groq */ `*[_type == "post"]{
         ...,
         content {
