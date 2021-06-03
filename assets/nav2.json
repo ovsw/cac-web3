@@ -41,6 +41,13 @@
             "icon": "globe-americas-duotone"
           },
           {
+            "name": "Food",
+            "description": "and sample menu",
+            "new": false,
+            "url": "/food-and-sample-menu/",
+            "icon": "salad-duotone"
+          },
+          {
             "name": "Testimonials",
             "description": "from our families",
             "new": false,
