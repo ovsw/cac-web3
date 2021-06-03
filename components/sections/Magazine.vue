@@ -80,15 +80,17 @@
         flex-1
         border-4 border-green
 
-        my-grd p-6 space-y-6
+        my-grd px-6 py-12 space-y-6
 
-        md:border-5 md:p-10 md:ml-grd
+        md:border-5 md:p-10 lg:ml-grd
         
-        lg:max-w-2xl lg:p-20 lg:my-0 2xl:mr-grd
+        lg:max-w-2xl lg:p-20 lg:my-0 lg:py-40 
+        
+        2xl:mr-grd
         "
     >
       <div class="space-y-7">
-        <h2>{{ section.title }}</h2>
+        <h2 class="sectionMainHeading">{{ section.title }}</h2>
 
         <div class="magSection__subHeadingWrapper">
           <h3 class="[ subtitle ]">{{ section.subtitle }}</h3>

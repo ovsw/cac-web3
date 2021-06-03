@@ -30,7 +30,7 @@
         <div
           class="page-header__content bg-light inline-block p-8 lg:p-14 rounded-tr-large"
         >
-          <h1 class="text-3xl lg:text-5xl">{{ title }}</h1>
+          <h1 class="sectionMainHeading">{{ title }}</h1>
         </div>
       </div>
     </div>

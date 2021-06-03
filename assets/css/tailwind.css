@@ -93,8 +93,14 @@
 }
 
 @layer components {
+  .sectionMainHeading {
+    @apply text-3xl lg:text-4xl 2xl:text-5xl;
+  }
   .button {
     @apply py-4 px-6 inline-flex items-center no-underline text-center bg-green text-light hover:text-yellow-light rounded uppercase font-semibold tracking-wider;
+  }
+  .button--light {
+    @apply bg-light text-green;
   }
   .newTag {
     @apply ml-1 bg-red text-yellow px-2 py-1 relative leading-none rounded-full uppercase font-bold text-xxs;

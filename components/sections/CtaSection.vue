@@ -1,6 +1,6 @@
 <<template>
   <section
-    class="[ ctaSection ]  p-grd my-grd bg-green text-light"
+    class="[ ctaSection ]  py-grd  my-grd bg-green text-light"
     data-theme-color="green"
     data-theme="dark"
   >
@@ -11,7 +11,7 @@
         class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 2xl:mx-grd "
       >
         <div class="ctaSection__leftColumn [ space-y-7 ]">
-          <h2>{{ section.title }}</h2>
+          <h2 class="sectionMainHeading max-w-3xl">{{ section.title }}</h2>
 
           <div v-if="section.subtitle" class="ctaSection__subHeadingWrapper">
             <h3 class="subtitle">{{ section.subtitle }}</h3>
@@ -20,19 +20,15 @@
           <div v-if="section.text" class="ctaSection__rteWrapper [ space-y-7 ]">
             <SanityContent
               :blocks="section.text"
-              class=" max-w-prose text-light text-lg"
+              class="prose max-w-prose text-light text-lg"
             />
           </div>
         </div>
 
-        <div v-if="section.buttons" class="ctaSection__rightColumn cluster-l">
-          <div v-for="button in section.buttons">
-            <a
-              :href="`/${button.url}/`"
-              class="[ button button--outline-light ]"
-              >{{ button.text }}</a
-            >
-          </div>
+        <div v-if="section.button1" class="ctaSection__rightColumn mt-8">
+          <Button :url="section.button1.url" class="button--light">{{
+            section.button1.text
+          }}</Button>
         </div>
       </div>
     </div>
