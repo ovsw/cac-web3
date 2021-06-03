@@ -14,10 +14,12 @@
         class="object-cover w-full h-full"
         :src="
           $urlFor(section.image)
-            .width(1300)
-            .height(1300)
+            .width(800)
+            .height(800)
         "
         :alt="section.image.alt"
+      />
+      <!-- 
         :srcset="
           $urlFor(section.image)
             .width(400)
@@ -44,8 +46,7 @@
               .height(1500) +
             ' 2500w'
         "
-      />
-      <!-- sizes="
+        sizes="
           (min-width: 1500px) 860px,
           100vw
         " -->
