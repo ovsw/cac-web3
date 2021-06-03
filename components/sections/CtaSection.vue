@@ -8,9 +8,9 @@
 
     <div class="[ wrapper ]">
       <div
-        class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 2xl:mx-grd "
+        class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 2xl:mx-grd relative"
       >
-        <div class="ctaSection__leftColumn [ space-y-7 ]">
+        <div class="ctaSection__leftColumn [ space-y-7 ] relative z-20">
           <h2 class="sectionMainHeading max-w-3xl">{{ section.title }}</h2>
 
           <div v-if="section.subtitle" class="ctaSection__subHeadingWrapper">
@@ -29,6 +29,25 @@
           <Button :url="section.button1.url" class="button--light">{{
             section.button1.text
           }}</Button>
+        </div>
+
+        <div
+          v-if="section.image && section.image.asset"
+          class="w-2/3 absolute top-0 right-0 h-full opacity-30 hidden lg:block"
+        >
+          <img
+            :src="
+              $urlFor(section.image)
+                .width(800)
+                .height(400)
+            "
+            class="absolute top-0 right-0 h-full w-full z-0 object-cover"
+            alt="section.image.alt"
+          />
+          <div
+            class="absolute top-0 left-0 right-0 h-full w-full z-10 bg-gradient-to-r to-transparent"
+            :class="`from-green`"
+          ></div>
         </div>
       </div>
     </div>
