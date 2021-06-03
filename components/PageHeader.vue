@@ -3,14 +3,9 @@
     <component :is="'style'" v-if="image">
       .page-header[data-id="12312321"] { background-image: url('{{
         $urlFor(image)
-          .width(600)
-          .height(400)
-      }}')!important; } @media screen and (min-width: 600px) {
-      .page-header[data-id="12312321"] { background-image: url('{{
-        $urlFor(image)
           .width(1200)
           .height(800)
-      }}')!important; } } @media screen and (min-width: 1200px) {
+      }}')!important; } @media screen and (min-width: 1200px) {
       .page-header[data-id="12312321"] { background-image: url('{{
         $urlFor(image)
           .width(1600)
@@ -19,7 +14,7 @@
     </component>
 
     <div
-      class="[ page-header ] bg-cover bg-fixed pt-96  2xl:pt-160 relative"
+      class="[ page-header ] bg-cover bg-fixed bg-center pt-96  2xl:pt-160 relative"
       :id="12312321"
       :data-id="12312321"
     >
