@@ -53,6 +53,13 @@
             "new": false,
             "url": "/testimonials/",
             "icon": "comments-duotone"
+          },
+          {
+            "name": "FAQs",
+            "description": "Frequent Questions",
+            "new": false,
+            "url": "/faqs/",
+            "icon": "question-circle-duotone"
           }
         ]
       },
@@ -214,13 +221,6 @@
             "new": false,
             "url": "/download-parent-guide/",
             "icon": "clipboard-list-check-duotone"
-          },
-          {
-            "name": "FAQs",
-            "description": "Frequent Questions",
-            "new": false,
-            "url": "/faqs/",
-            "icon": "question-circle-duotone"
           },
           {
             "name": "Dates & Rates",
