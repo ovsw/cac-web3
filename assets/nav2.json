@@ -56,9 +56,9 @@
           },
           {
             "name": "FAQs",
-            "description": "Frequent Questions",
+            "description": "for prospective families",
             "new": false,
-            "url": "/faqs/",
+            "url": "/faqs-prospective-families/",
             "icon": "question-circle-duotone"
           }
         ]
@@ -221,6 +221,13 @@
             "new": false,
             "url": "/download-parent-guide/",
             "icon": "clipboard-list-check-duotone"
+          },
+          {
+            "name": "FAQs",
+            "description": "Frequent Questions",
+            "new": false,
+            "url": "/faqs/",
+            "icon": "question-circle-duotone"
           },
           {
             "name": "Dates & Rates",
