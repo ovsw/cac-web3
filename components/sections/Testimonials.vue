@@ -7,7 +7,7 @@
         >
           <h2 class="mt-4 mb-8 md:mb-16">{{ section.title }}</h2>
           <!-- grid grid-cols-3 gap-5 -->
-          <ul class="md:flex">
+          <ul class="">
             <li
               v-for="item in section.testimonialsList"
               :key="item._key"
@@ -34,9 +34,9 @@
                       <div class="text-base font-medium text-gray-900">
                         {{ item.author }}
                       </div>
-                      <div class="text-base font-medium text-green">
+                      <!-- <div class="text-base font-medium text-green">
                         Parent
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </footer>
