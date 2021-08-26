@@ -42,7 +42,11 @@
           class="footer__address footer__address space-y-3 md:col-span-2 py-6 text-light"
         >
           <p class="text-2xl font-semibold ">Canadian Adventure Camp</p>
-          <p>[SEO text here]</p>
+          <p>
+            Canada's Premiere International coed overnight camp, located on a
+            private island in Temegami. We provide acclaimed programs for
+            children all around the world.
+          </p>
           <p>
             <a href="mailto:info@canadianadventurecamp.com"
               >info@canadianadventurecamp.com</a
@@ -93,7 +97,6 @@
               >
             </li>
             <li><NuxtLink to="/history/">History</NuxtLink></li>
-            <li><NuxtLink to="/join-our-team/">Join Our Team</NuxtLink></li>
             <li><NuxtLink to="/contact/">Contact Us</NuxtLink></li>
           </ul>
         </div>
