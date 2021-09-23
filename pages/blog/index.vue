@@ -5,6 +5,7 @@
       :image="blogHome.content.headerImage"
     />
     <section>
+      <!-- <p>Current Page: {{ currentPage }}</p> -->
       <div class="container mx-auto">
         <CardGridWrapper>
           <CardGrid
@@ -42,6 +43,27 @@ export default {
     const sanityCall = $sanity.fetch(query);
     // console.log("🎈 asyncData: called", sanityCall);
     return sanityCall;
+  },
+  data() {
+    return {
+      prevpage: null,
+      nextpage: null,
+      currentPage: null,
+      pageNumbers: [],
+      pageNumberCount: 0
+    };
+  },
+  mounted() {
+    this.setPageNumbers();
+  },
+  methods: {
+    setPages(currentPage, totalPageCount) {
+      return null;
+    },
+    setPageNumbers() {
+      let _currentPage = this.$route.query.page ? this.$route.query.page : 1;
+      this.currentPage = _currentPage;
+    }
   }
 };
 </script>
