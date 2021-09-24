@@ -37,9 +37,9 @@ module.exports = {
           dark: "#006F94"
         },
         yellow: {
-          light: "#ffd324",
+          light: "#ffdd00",
           DEFAULT: "#ffcc00",
-          dark: "#fefc9f"
+          dark: "#cccc00"
         },
         cyan: {
           light: "#0EADC2",

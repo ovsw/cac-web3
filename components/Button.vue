@@ -23,17 +23,22 @@ export default {
       return url.replace(/\/\//g, "/");
     },
     linkProps(url) {
-      if (url.match(/^(http(s)?|ftp):\/\//)) {
-        return {
-          is: "a",
-          href: url,
-          target: "_blank",
-          rel: "noopener"
-        };
+      if (
+        url.match(/((mailto:\w+)|(tel:\w+)|(http:\/\/\w+)|(https:\/\/\w+)).+/)
+      ) {
+        if (url)
+          return {
+            is: "a",
+            href: url,
+            target: "_blank",
+            rel: "noopener"
+          };
       }
+
+      let routerLinkDestination = `/${url}/`;
       return {
         is: "router-link",
-        to: this.cleanUrl(url)
+        to: this.cleanUrl(routerLinkDestination)
       };
     }
   }

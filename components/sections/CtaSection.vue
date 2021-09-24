@@ -29,7 +29,7 @@
           v-if="section.button1"
           class="ctaSection__rightColumn mt-8 relative z-50"
         >
-          <Button :url="section.button1.url" class="button--light">{{
+          <Button :url="section.button1.url" class="button--primary">{{
             section.button1.text
           }}</Button>
         </div>
