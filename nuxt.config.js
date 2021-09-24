@@ -14,6 +14,14 @@ const configSanity = {
 };
 const client = createClient(configSanity);
 
+const seoTitle =
+  "DelGrosso's Amusement Park & Laguna Splash Water Park in Tipton, PA";
+const seoDescription =
+  "DelGrosso's Pennsylvania amusement park offers family fun at an affordable price, including kids and adults games, rides, and an amazing water park!";
+const seoSocialShareImage =
+  "/delgrosso-amusement-park-laguna-splash-default-social-image.jpg";
+const seoCannonicalUrl = "https://www.mydelgrossopark.com";
+
 export default {
   privateRuntimeConfig: {
     sanity: {
@@ -34,13 +42,68 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" }
     ],
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: seoDescription
+      },
+      {
+        hid: "ogtitle",
+        name: "og:title",
+        content: seoTitle
+      },
+      {
+        hid: "ogdescription",
+        name: "og:description",
+        content: seoDescription
+      },
+      {
+        hid: "ogimage",
+        name: "og:image",
+        content: seoSocialShareImage
+      },
+      {
+        hid: "msTitleColor",
+        name: "msapplication-TileColor",
+        content: "#ffffff"
+      },
+      {
+        hid: "theme-color",
+        name: "msapplication-TileColor",
+        content: "#ffffff"
+      }
+    ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
-      // {
-      //   rel: "stylesheet",
-      //   href:
-      //     "https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300;500;900&display=swap"
-      // }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico?v=2" },
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/apple-touch-icon.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/apple-touch-icon.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicon-32x32.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicon-16x16.png"
+      },
+      { rel: "manifest", href: "/site.webmanifest" },
+      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#2d8262" }
+      // { rel: "canonical", href: seoCannonicalUrl }
     ]
   },
 
