@@ -96,7 +96,11 @@
                 >Community Initiatives</NuxtLink
               >
             </li>
-            <li><NuxtLink to="/history/">History</NuxtLink></li>
+            <li>
+              <NuxtLink to="/our-summer-camp-history-and-goal/"
+                >History</NuxtLink
+              >
+            </li>
             <li><NuxtLink to="/contact/">Contact Us</NuxtLink></li>
           </ul>
         </div>
