@@ -15,12 +15,11 @@ const configSanity = {
 const client = createClient(configSanity);
 
 const seoTitle =
-  "DelGrosso's Amusement Park & Laguna Splash Water Park in Tipton, PA";
+  "Ontario Overnight Summer Camp for Kids | Canadian Adventure Camp";
 const seoDescription =
-  "DelGrosso's Pennsylvania amusement park offers family fun at an affordable price, including kids and adults games, rides, and an amazing water park!";
+  "Canadian Adventure Camp is a coed overnight summer camp for kids located on a beautiful private island in the wilderness lakes region of Temagami in Ontario Canada.";
 const seoSocialShareImage =
   "/delgrosso-amusement-park-laguna-splash-default-social-image.jpg";
-const seoCannonicalUrl = "https://www.mydelgrossopark.com";
 
 export default {
   privateRuntimeConfig: {
@@ -33,7 +32,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "web",
+    title: "Canadian Adventure Camp",
     htmlAttrs: {
       lang: "en"
     },
@@ -61,14 +60,9 @@ export default {
         content: seoDescription
       },
       {
-        hid: "ogimage",
-        name: "og:image",
-        content: seoSocialShareImage
-      },
-      {
         hid: "msTitleColor",
         name: "msapplication-TileColor",
-        content: "#ffffff"
+        content: "#ece7d7"
       },
       {
         hid: "theme-color",
@@ -102,7 +96,7 @@ export default {
         href: "/favicon-16x16.png"
       },
       { rel: "manifest", href: "/site.webmanifest" },
-      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#2d8262" }
+      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#576f37" }
       // { rel: "canonical", href: seoCannonicalUrl }
     ]
   },

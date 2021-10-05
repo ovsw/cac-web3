@@ -29,6 +29,7 @@
 const query = /* groq */ `{
   "posts": *[_type == 'post' && (content.publishedAt < now())] {
     ...,
+    "ogImageUrl": content.hero.image.asset->url
     content {
       ...,
       "authorName": author->name
@@ -64,6 +65,61 @@ export default {
       let _currentPage = this.$route.query.page ? this.$route.query.page : 1;
       this.currentPage = _currentPage;
     }
+  },
+
+  computed: {
+    seoTitle() {
+      return "The CAC Blog | Canadian Adventure Camp";
+    },
+    seoDescription() {
+      return "Canadian Adventure Camp is a full service children's summer camp located on beautiful 160-acre Adventure Island in Temagami, Ontario!  Canadian Adventure Camp is the summer camp home to 130 boys and girls, aged 5 through 17 years.";
+    },
+    seoImage() {
+      return undefined;
+    },
+    seoPageUrl() {
+      return "https://www.mydelgrossopark.com/blog/";
+    },
+    seoShareImage() {
+      return undefined;
+    }
+  },
+
+  head() {
+    return {
+      title: this.seoTitle,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.seoDescription
+        },
+        {
+          hid: "ogtitle",
+          name: "og:title",
+          content: this.seoTitle
+        },
+        {
+          hid: "ogdescription",
+          name: "og:description",
+          content: this.seoDescription
+        },
+        {
+          hid: "ogimage",
+          name: "og:image",
+          content: this.seoShareImage
+        },
+        {
+          hid: "ogurl",
+          name: "og:url",
+          content: this.seoPageUrl
+        }
+      ],
+      link: [{ rel: "canonical", href: this.seoPageUrl }],
+      __dangerouslyDisableSanitizersByTagID: {
+        ogimage: ["content"]
+      }
+    };
   }
 };
 </script>
