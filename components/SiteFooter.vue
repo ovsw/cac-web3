@@ -122,8 +122,8 @@
 
     <div class="footer__bottom bg-green-dark p-4 md:text-center text-sm">
       <p>
-        ©2014-2021 Canadian Adventure Camp, Inc. All Rights Reserved. | Website
-        by:
+        ©2014-{{ getCurrentYear() }} Canadian Adventure Camp, Inc. All Rights
+        Reserved. | Website by:
         <a
           href="https://studiorovst.com"
           target="_blank"
@@ -136,7 +136,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    getCurrentYear() {
+      return new Date().getFullYear();
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
