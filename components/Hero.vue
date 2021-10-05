@@ -79,6 +79,7 @@
                 "
               >
                 <NuxtLink
+                  v-if="buttonUrl"
                   :to="buttonUrl"
                   class="button [ button ] bg-yellow text-dark hover:text-dark-dark mt-4 md:mr-4"
                 >
@@ -126,11 +127,11 @@ export default {
     },
     buttonText: {
       type: String,
-      default: "missing buttonText"
+      default: ""
     },
     buttonUrl: {
       type: String,
-      default: "missing buttonUrl"
+      default: ""
     },
     image: {
       type: Object,
