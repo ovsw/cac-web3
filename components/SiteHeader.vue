@@ -1,7 +1,7 @@
 <template>
   <header
     role="banner"
-    class="site-head shadow fixed w-full z-40 bg-light"
+    class="site-head shadow fixed w-full z-50 bg-light"
     :class="[
       $store.state.showDrafPreviewBanner == true ? 'bodyPreviewActive' : ''
     ]"
