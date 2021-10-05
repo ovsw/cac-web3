@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:relative" v-on-click-outside="hideMenu">
+  <div class="lg:relative" v-on-click-outside="handleClickOutside">
     <!-- @mouseover="showMenu" @mouseleave="hideMenu" -->
     <button class="" @click="toggleMenu">
       {{ menuData.name }}
@@ -185,6 +185,13 @@ export default {
     },
     toggleMenu() {
       this.isVisible = !this.isVisible;
+    },
+
+    handleClickOutside() {
+      this.isVisible = false;
+      this.focusedIndex = 0;
+
+      // check that desktop menu is visible
     },
     hideMenu() {
       this.isVisible = false;

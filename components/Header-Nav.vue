@@ -6,13 +6,12 @@
   >
     <!-- x-bind:data-open="mainMenuisOpen"
     :aria-expanded="mainMenuisOpen" -->
-    <div class="hamburger-menu__container flex md:hidden">
+    <div class="hamburger-menu__container flex md:hidden" @click="toggleMenu">
       <button
         aria-controls="nav-list"
         aria-label="Main Menu toggle"
         :aria-expanded="menuOpen"
         class="hamburger-menu hidden"
-        @click.prevent="toggleMenu"
         :data-open="menuOpen"
       >
         <div></div>
