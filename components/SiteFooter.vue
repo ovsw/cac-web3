@@ -91,11 +91,11 @@
           <h4>About</h4>
           <ul>
             <li><NuxtLink to="/join-our-team/">Join Our Team</NuxtLink></li>
-            <li>
+            <!-- <li>
               <NuxtLink to="/staff/community-initiatives/"
                 >Community Initiatives</NuxtLink
               >
-            </li>
+            </li> -->
             <li>
               <NuxtLink to="/our-summer-camp-history-and-goal/"
                 >History</NuxtLink
