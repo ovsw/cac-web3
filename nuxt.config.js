@@ -153,7 +153,7 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/sitemap"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -241,5 +241,10 @@ export default {
   googleAnalytics: {
     // Options
     id: "UA-46855288-1"
+  },
+
+  sitemap: {
+    hostname: "https://www.canadianadventurecamp.com/",
+    gzip: true
   }
 };
