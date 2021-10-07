@@ -83,10 +83,10 @@ export default {
 
   computed: {
     seoTitle() {
-      return "The CAC Blog";
+      return "Ontario Overnight Summer Camp for Kids | Canadian Adventure Camp";
     },
     seoDescription() {
-      return "Canadian Adventure Camp is a full service children's summer camp located on beautiful 160-acre Adventure Island in Temagami, Ontario!  Canadian Adventure Camp is the summer camp home to 130 boys and girls, aged 5 through 17 years.";
+      return "Canadian Adventure Camp is a coed overnight summer camp for kids located on a beautiful private island in the wilderness lakes region of Temagami in Ontario Canada.";
     },
     seoPageUrl() {
       return "https://www.canadianadventurecamp.com/";
