@@ -29,13 +29,15 @@
 const query = /* groq */ `{
   "posts": *[_type == 'post' && (content.publishedAt < now())] {
     ...,
-    "ogImageUrl": content.hero.image.asset->url
     content {
       ...,
       "authorName": author->name
     }
   } | order(content.publishedAt desc),
-  "blogHome": *[ _id == 'blogHome'][0]
+  "blogHome": *[ _id == 'blogHome'][0]{
+    "ogImageUrl": content.headerImage.asset->url,
+    ...
+  }
 }`;
 
 export default {
@@ -74,14 +76,11 @@ export default {
     seoDescription() {
       return "Canadian Adventure Camp is a full service children's summer camp located on beautiful 160-acre Adventure Island in Temagami, Ontario!  Canadian Adventure Camp is the summer camp home to 130 boys and girls, aged 5 through 17 years.";
     },
-    seoImage() {
-      return undefined;
-    },
     seoPageUrl() {
-      return "https://www.mydelgrossopark.com/blog/";
+      return "https://www.canadianadventurecamp.com/blog/";
     },
     seoShareImage() {
-      return undefined;
+      return `${this.blogHome.ogImageUrl}?w=1200&h=627&auto=format`;
     }
   },
 
