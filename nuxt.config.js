@@ -128,7 +128,8 @@ export default {
     "@nuxtjs/svg-sprite",
     "@nuxtjs/style-resources",
     "@nuxtjs/sanity/module",
-    "@nuxtjs/google-analytics"
+    "@nuxtjs/google-analytics",
+    "@aceforth/nuxt-netlify"
   ],
 
   googleFonts: {
@@ -153,7 +154,7 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/redirect-module", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/sitemap"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -248,163 +249,166 @@ export default {
     gzip: true
   },
 
-  redirect: [
-    // Redirect options here
-    {
-      from: "^/about/about-our-canadian-summer-camp/",
-      to: "/our-summer-camp-history-and-goal//",
-      statusCode: 301
-    },
-    {
-      from: "^/summer-camp-dates-rates/dates-rates/",
-      to: "/dates-and-rates/",
-      statusCode: 301
-    },
-    {
-      from: "^/about/private-island-location-ontario/",
-      to: "/private-island-camp-location-ontario/",
-      statusCode: 301
-    },
-    {
-      from: "^/campers/summer-camp-program/",
-      to: "/programs/general-camp-program/",
-      statusCode: 301
-    },
-    {
-      from: "^/about/our-staff/",
-      to: "/health-and-safety/",
-      statusCode: 301
-    },
-    {
-      from: "^/about/ontario-summer-camp-directors/",
-      to: "/great-leadership/",
-      statusCode: 301
-    },
-    {
-      from: "^/about/ontario-summer-camp-facilities/",
-      to: "/accommodation-and-facilities/",
-      statusCode: 301
-    },
-    {
-      from: "^/about/kids-summer-camp-food-menu/",
-      to: "/food-and-sample-menu/",
-      statusCode: 301
-    },
-    {
-      from: "^/about/faq-summer-camp/",
-      to: "/faqs-prospective-families/",
-      statusCode: 301
-    },
-    // {
-    //   from: "^/about/community-initiatives/",
-    //   to: "/staff/community-initiatives/",
-    //   statusCode: 301
-    // },
-    {
-      from: "^/about/memeberships-partnerships/",
-      to: "/memeberships-partnerships/",
-      statusCode: 301
-    },
-    {
-      from: "^/campers/gymnastics-program-boys-girls/",
-      to: "/programs/specialty-gymnastics-program/",
-      statusCode: 301
-    },
-    {
-      from: "^/campers/trampoline-program-summer-camp/",
-      to: "/programs/trampoline-specialty-program/",
-      statusCode: 301
-    },
-    {
-      from: "^/campers/waterski-and-wakeboarding/",
-      to: "/programs/water-ski-and-wake-boarding-specialty-program/",
-      statusCode: 301
-    },
-    {
-      from: "^/campers/aerials/",
-      to: "/programs/aerials-specialty-program/",
-      statusCode: 301
-    },
-    {
-      from: "^/info-summer-camp/what-to-bring/",
-      to: "/download-parent-guide/",
-      statusCode: 301
-    },
-    {
-      from: "^/summer-camp-dates-rates/application/",
-      to:
-        "https://canadianadventurecamp.campbrainregistration.com/?ReturnUrl=%2FHome%2FLanding",
-      statusCode: 301
-    },
-    {
-      from: "^/info-summer-camp/transportation/",
-      to: "/transportation/",
-      statusCode: 301
-    },
-    {
-      from: "^/info-summer-camp/transportation/travel-by-bus/",
-      to: "/transportation/travel-by-bus/",
-      statusCode: 301
-    },
-    {
-      from: "^/info-summer-camp/transportation/travel-by-car/",
-      to: "/transportation/travel-by-car/",
-      statusCode: 301
-    },
-    {
-      from: "^/info-summer-camp/transportation/international-campers/",
-      to: "/transportation/international-campers/",
-      statusCode: 301
-    },
-    {
-      from: "^/info-summer-camp/bunk1-international-email/",
-      to: "/stay-in-touch-with-your-camper/",
-      statusCode: 301
-    },
-    {
-      from: "^/info-summer-camp/visitor-days/",
-      to: "/visitor-days/",
-      statusCode: 301
-    },
-    {
-      from: "^/info-summer-camp/visitor-days/places-to-stay/",
-      to: "/places-to-stay-when-visiting/",
-      statusCode: 301
-    },
-    {
-      from: "^/info-summer-camp/faqs/",
-      to: "/faqs/",
-      statusCode: 301
-    },
-    {
-      from: "^/summer-camp-staff/staff/",
-      to: "/staff/",
-      statusCode: 301
-    },
-    {
-      from: "^/summer-camp-staff/available-positions/",
-      to: "/join-our-team/",
-      statusCode: 301
-    },
-    {
-      from: "^/nccp-and-adult-camp/nccp-courses/",
-      to: "/nccp-courses/",
-      statusCode: 301
-    },
-    {
-      from: "^/contact-us/message/",
-      to: "/contact/",
-      statusCode: 301
-    },
-    {
-      from: "^/contact-us/summer-and-winter-address/",
-      to: "/contact/",
-      statusCode: 301
-    },
-    {
-      from: "^/contact-us/driving-directions/",
-      to: "/contact/",
-      statusCode: 301
-    }
-  ]
+  netlify: {
+    mergeSecurityHeaders: true,
+    redirects: [
+      // Redirect options here
+      {
+        from: "^/about/about-our-canadian-summer-camp/",
+        to: "/our-summer-camp-history-and-goal/",
+        status: 301
+      },
+      {
+        from: "^/summer-camp-dates-rates/dates-rates/",
+        to: "/dates-and-rates/",
+        status: 301
+      },
+      {
+        from: "^/about/private-island-location-ontario/",
+        to: "/private-island-camp-location-ontario/",
+        status: 301
+      },
+      {
+        from: "^/campers/summer-camp-program/",
+        to: "/programs/general-camp-program/",
+        status: 301
+      },
+      {
+        from: "^/about/our-staff/",
+        to: "/health-and-safety/",
+        status: 301
+      },
+      {
+        from: "^/about/ontario-summer-camp-directors/",
+        to: "/great-leadership/",
+        status: 301
+      },
+      {
+        from: "^/about/ontario-summer-camp-facilities/",
+        to: "/accommodation-and-facilities/",
+        status: 301
+      },
+      {
+        from: "^/about/kids-summer-camp-food-menu/",
+        to: "/food-and-sample-menu/",
+        status: 301
+      },
+      {
+        from: "^/about/faq-summer-camp/",
+        to: "/faqs-prospective-families/",
+        status: 301
+      },
+      // {
+      //   from: "^/about/community-initiatives/",
+      //   to: "/staff/community-initiatives/",
+      //   status: 301
+      // },
+      {
+        from: "^/about/memeberships-partnerships/",
+        to: "/memeberships-partnerships/",
+        status: 301
+      },
+      {
+        from: "^/campers/gymnastics-program-boys-girls/",
+        to: "/programs/specialty-gymnastics-program/",
+        status: 301
+      },
+      {
+        from: "^/campers/trampoline-program-summer-camp/",
+        to: "/programs/trampoline-specialty-program/",
+        status: 301
+      },
+      {
+        from: "^/campers/waterski-and-wakeboarding/",
+        to: "/programs/water-ski-and-wake-boarding-specialty-program/",
+        status: 301
+      },
+      {
+        from: "^/campers/aerials/",
+        to: "/programs/aerials-specialty-program/",
+        status: 301
+      },
+      {
+        from: "^/info-summer-camp/what-to-bring/",
+        to: "/download-parent-guide/",
+        status: 301
+      },
+      {
+        from: "^/summer-camp-dates-rates/application/",
+        to:
+          "https://canadianadventurecamp.campbrainregistration.com/?ReturnUrl=%2FHome%2FLanding",
+        status: 301
+      },
+      {
+        from: "^/info-summer-camp/transportation/",
+        to: "/transportation/",
+        status: 301
+      },
+      {
+        from: "^/info-summer-camp/transportation/travel-by-bus/",
+        to: "/transportation/travel-by-bus/",
+        status: 301
+      },
+      {
+        from: "^/info-summer-camp/transportation/travel-by-car/",
+        to: "/transportation/travel-by-car/",
+        status: 301
+      },
+      {
+        from: "^/info-summer-camp/transportation/international-campers/",
+        to: "/transportation/international-campers/",
+        status: 301
+      },
+      {
+        from: "^/info-summer-camp/bunk1-international-email/",
+        to: "/stay-in-touch-with-your-camper/",
+        status: 301
+      },
+      {
+        from: "^/info-summer-camp/visitor-days/",
+        to: "/visitor-days/",
+        status: 301
+      },
+      {
+        from: "^/info-summer-camp/visitor-days/places-to-stay/",
+        to: "/places-to-stay-when-visiting/",
+        status: 301
+      },
+      {
+        from: "^/info-summer-camp/faqs/",
+        to: "/faqs/",
+        status: 301
+      },
+      {
+        from: "^/summer-camp-staff/staff/",
+        to: "/staff/",
+        status: 301
+      },
+      {
+        from: "^/summer-camp-staff/available-positions/",
+        to: "/join-our-team/",
+        status: 301
+      },
+      {
+        from: "^/nccp-and-adult-camp/nccp-courses/",
+        to: "/nccp-courses/",
+        status: 301
+      },
+      {
+        from: "^/contact-us/message/",
+        to: "/contact/",
+        status: 301
+      },
+      {
+        from: "^/contact-us/summer-and-winter-address/",
+        to: "/contact/",
+        status: 301
+      },
+      {
+        from: "^/contact-us/driving-directions/",
+        to: "/contact/",
+        status: 301
+      }
+    ]
+  }
 };
