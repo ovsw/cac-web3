@@ -1,3 +1,4 @@
+import Vue from "vue";
 import Tawk from "vue-tawk";
 
 Vue.use(Tawk, {
