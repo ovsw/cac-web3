@@ -116,7 +116,7 @@ export default {
     "~plugins/image-builder.js",
     "~/plugins/to-link.js",
     "~/plugins/lightbox.client.js",
-    "~/plugins/tawk.js"
+    { src: "~/plugins/tawk.js", ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
