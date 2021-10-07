@@ -127,7 +127,8 @@ export default {
     "@nuxtjs/google-fonts",
     "@nuxtjs/svg-sprite",
     "@nuxtjs/style-resources",
-    "@nuxtjs/sanity/module"
+    "@nuxtjs/sanity/module",
+    "@nuxtjs/google-analytics"
   ],
 
   googleFonts: {
@@ -235,5 +236,10 @@ export default {
   sanity: {
     ...configSanity,
     withCredentials: true
+  },
+
+  googleAnalytics: {
+    // Options
+    id: "UA-46855288-1"
   }
 };
