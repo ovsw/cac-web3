@@ -19,7 +19,7 @@ const seoTitle =
 const seoDescription =
   "Canadian Adventure Camp is a coed overnight summer camp for kids located on a beautiful private island in the wilderness lakes region of Temagami in Ontario Canada.";
 const seoSocialShareImage =
-  "/delgrosso-amusement-park-laguna-splash-default-social-image.jpg";
+  "https://cdn.sanity.io/images/lwnx6aqb/production/b9c5369beeb93cc7a3c1eaeb8b01c4e062f73696-2400x1600.jpg?w=1200&h=627&auto=format";
 
 export default {
   privateRuntimeConfig: {
