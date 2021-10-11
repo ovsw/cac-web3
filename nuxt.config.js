@@ -45,6 +45,10 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
+        name: "facebook-domain-verification",
+        content: "zwscm4w9s5sg33cy3xdkaydi70zo9b"
+      },
+      {
         hid: "description",
         name: "description",
         content: seoDescription
@@ -155,7 +159,19 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/sitemap"],
+  modules: [
+    "@nuxtjs/sitemap",
+    [
+      "nuxt-facebook-pixel-module",
+      {
+        /* module options */
+        track: "PageView",
+        pixelId: "391749082579870",
+        autoPageView: true,
+        disabled: false
+      }
+    ]
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
