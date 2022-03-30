@@ -53,8 +53,8 @@
             >
           </p>
           <p>
-            15 Idleswift Drive Thornhill, <br />
-            Ontario, L4J 1K9 Canada
+            6 Hubner Drive, Richmond Hill, <br />
+            Ontario, L4E 4W5, Canada
           </p>
         </div>
 
