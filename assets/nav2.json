@@ -14,7 +14,7 @@
           },
           {
             "name": "Dates & Rates",
-            "description": "for 2022",
+            "description": "for 2023 (Early Bird)",
             "new": true,
             "url": "/dates-and-rates/",
             "icon": "calendar-alt-duotone"
@@ -78,7 +78,7 @@
             "name": "Y.L.P.",
             "description": "Youth Leadership Program",
             "subitems": [],
-            "new": true,
+            "new": false,
             "url": "/all-new-youth-leadership-program/",
             "icon": "graduation-cap-duotone"
           },
@@ -231,7 +231,7 @@
           },
           {
             "name": "Dates & Rates",
-            "description": "for 2022",
+            "description": "for 2023 (early bird)",
             "new": true,
             "url": "/dates-and-rates/",
             "icon": "calendar-alt-duotone"
@@ -239,7 +239,7 @@
           {
             "name": "Y.L.P.",
             "description": "Youth Leadership Programming",
-            "new": true,
+            "new": false,
             "url": "/all-new-youth-leadership-program/",
             "icon": "graduation-cap-duotone"
           },
