@@ -251,10 +251,10 @@
             "icon": "map-signs-duotone"
           },
           {
-            "name": "International Travel",
-            "description": "to camp",
+            "name": "Airport Service",
+            "description": "for international & domestic campers",
             "new": false,
-            "url": "/transportation/international-campers/",
+            "url": "/transportation/airport-service/",
             "icon": "globe-americas-duotone"
           },
           {

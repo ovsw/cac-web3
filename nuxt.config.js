@@ -425,6 +425,11 @@ export default {
         from: "/contact-us/driving-directions/",
         to: "/contact/",
         status: 301
+      },
+      {
+        from: "/transportation/international-campers/",
+        to: "/transportation/airport-service/",
+        status: 301
       }
     ]
   }
