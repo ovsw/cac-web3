@@ -61,10 +61,7 @@
                 lg:text-left lg:mx-0
               "
             >
-              Discover a coed overnight summer camp for kids, located on a
-              beautiful private island in the wilderness lakes region of
-              Temagami, that provides acclaimed programs to children from around
-              the world!
+              {{subtitle}}
             </p>
             <div
               class="mt-10 max-w-sm mx-auto 
@@ -123,7 +120,7 @@ export default {
     },
     subtitle: {
       type: String,
-      default: "missing subtitle"
+      default: "Discover an overnight summer camp for kids, located on a beautiful private island in the wilderness lakes region of Temagami, that provides acclaimed programs to children from around the world!"
     },
     buttonText: {
       type: String,
