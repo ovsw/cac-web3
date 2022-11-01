@@ -14,7 +14,7 @@
           },
           {
             "name": "Dates & Rates",
-            "description": "for 2023 (Early Bird)",
+            "description": "for 2023",
             "new": true,
             "url": "/dates-and-rates/",
             "icon": "calendar-alt-duotone"
@@ -231,7 +231,7 @@
           },
           {
             "name": "Dates & Rates",
-            "description": "for 2023 (early bird)",
+            "description": "for 2023",
             "new": true,
             "url": "/dates-and-rates/",
             "icon": "calendar-alt-duotone"
