@@ -43,9 +43,9 @@
         >
           <p class="text-2xl font-semibold ">Canadian Adventure Camp</p>
           <p>
-            Canada's Premiere International coed overnight camp, located on a
-            private island in Temegami. We provide acclaimed programs for
-            children all around the world.
+            Canada's Premiere International overnight camp, located on a private
+            island in Temegami. We provide acclaimed programs for children all
+            around the world.
           </p>
           <p>
             <a href="mailto:info@canadianadventurecamp.com"
