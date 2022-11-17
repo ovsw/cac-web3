@@ -158,6 +158,13 @@
             "new": false,
             "url": "/photos-and-videos/",
             "icon": "camera-retro-duotone"
+          },
+          {
+            "name": "Join Our Team",
+            "description": "See available positions",
+            "new": false,
+            "url": "/join-our-team/",
+            "icon": "users-duotone"
           }
         ]
       },

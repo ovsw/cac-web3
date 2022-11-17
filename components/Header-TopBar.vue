@@ -22,6 +22,16 @@
           />
           Dates &amp; Rates</a
         >
+        <a href="/join-our-team/" class="hidden lg:inline-flex items-center"
+          ><svg-icon
+            name="icon-question"
+            title="question mark icon"
+            width="1em"
+            height="1em"
+            class="inline"
+          />
+          Join Our Team</a
+        >
         <a href="/contact/" class="hidden lg:inline-flex items-center"
           ><svg-icon
             name="icon-question"
