@@ -22,16 +22,6 @@
           />
           Dates &amp; Rates</a
         >
-        <a href="/join-our-team/" class="hidden lg:inline-flex items-center"
-          ><svg-icon
-            name="icon-question"
-            title="question mark icon"
-            width="1em"
-            height="1em"
-            class="inline"
-          />
-          Join Our Team</a
-        >
         <a href="/contact/" class="hidden lg:inline-flex items-center"
           ><svg-icon
             name="icon-question"
@@ -45,6 +35,16 @@
       </div>
 
       <div class="md:space-x-4">
+        <NuxtLink to="/join-our-team/" class="hidden lg:inline-flex items-center"
+          ><svg-icon
+            name="icon-user-friends-light"
+            title="question mark icon"
+            width="1em"
+            height="1em"
+            class="inline"
+          />
+          Join Our Team</NuxtLink
+        >
         <NuxtLink to="/blog/" class="hidden md:inline-block">
           <svg-icon
             name="icon-newspaper"
