@@ -120,7 +120,7 @@ export default {
     },
     subtitle: {
       type: String,
-      default: "Discover an overnight summer camp for kids, located on a beautiful private island in the wilderness lakes region of Temagami, that provides acclaimed programs to children from around the world!"
+      default: "mising subtitle"
     },
     buttonText: {
       type: String,
