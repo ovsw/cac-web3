@@ -3,7 +3,7 @@
     <Hero
       eyebrow="Welcome to"
       title="Canadian Adventure Camp"
-      subtitle="Discover an overnight summer camp for kids, located on a beautiful private island in the wilderness lakes region of Temagami, that provides acclaimed programs to children from around the world!" 
+      subtitle="Discover an overnight summer camp for all children, located on a beautiful private island in the wilderness lakes region of Temagami, that provides acclaimed programs to campers from around the world!" 
       :image="siteHome.content.hero.image"
       buttonText="Our Programs"
     />
@@ -87,7 +87,7 @@ export default {
       return "Ontario Overnight Summer Camp for Kids | Canadian Adventure Camp";
     },
     seoDescription() {
-      return "Canadian Adventure Camp is an overnight summer camp for kids located on a beautiful private island in the wilderness lakes region of Temagami in Ontario Canada.";
+      return "Canadian Adventure Camp is an overnight summer camp for all children located on a beautiful private island in the wilderness lakes region of Temagami in Ontario Canada.";
     },
     seoPageUrl() {
       return "https://www.canadianadventurecamp.com/";
