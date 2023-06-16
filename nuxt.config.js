@@ -75,7 +75,7 @@ export default {
       },
       {
         hid: "ga-main",
-        src: "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-XEJ31NQ67M",
         async: true,
       },
       {
