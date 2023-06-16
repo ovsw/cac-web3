@@ -72,15 +72,6 @@ export default {
         hid: "theme-color",
         name: "msapplication-TileColor",
         content: "#ffffff"
-      },
-      {
-        hid: "ga-main",
-        src: "https://www.googletagmanager.com/gtag/js?id=G-XEJ31NQ67M",
-        async: true,
-      },
-      {
-          hid: "ga-call",
-          src: "js/ga.js",
       }
     ],
     link: [
@@ -129,6 +120,7 @@ export default {
     "~plugins/image-builder.js",
     "~/plugins/to-link.js",
     "~/plugins/lightbox.client.js",
+    "~/plugins/vue-gtag.js",
     { src: "~/plugins/tawk.js", ssr: false }
   ],
 

@@ -19,6 +19,7 @@
     "gorko": "^0.3.0",
     "nuxt": "^2.15.4",
     "nuxt-facebook-pixel-module": "^1.5.0",
+    "vue-gtag": "^1.16.1",
     "vue-on-click-outside": "^1.0.3",
     "vue-tawk": "^1.0.1"
   },
