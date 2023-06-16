@@ -72,6 +72,15 @@ export default {
         hid: "theme-color",
         name: "msapplication-TileColor",
         content: "#ffffff"
+      },
+      {
+        hid: "ga-main",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",
+        async: true,
+      },
+      {
+          hid: "ga-call",
+          src: "js/ga.js",
       }
     ],
     link: [
@@ -160,7 +169,6 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/sitemap",
-    "@nuxtjs/google-analytics",
     [
       "nuxt-facebook-pixel-module",
       {
@@ -254,11 +262,6 @@ export default {
   sanity: {
     ...configSanity,
     withCredentials: true
-  },
-
-  googleAnalytics: {
-    // Options
-    id: "G-XEJ31NQ67M"
   },
 
   sitemap: {
