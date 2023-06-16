@@ -133,7 +133,6 @@ export default {
     "@nuxtjs/svg-sprite",
     "@nuxtjs/style-resources",
     "@nuxtjs/sanity/module",
-    "@nuxtjs/google-analytics",
     "@aceforth/nuxt-netlify"
   ],
 
@@ -161,6 +160,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/sitemap",
+    "@nuxtjs/google-analytics",
     [
       "nuxt-facebook-pixel-module",
       {
