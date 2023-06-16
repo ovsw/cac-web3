@@ -159,19 +159,7 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    "@nuxtjs/sitemap",
-    [
-      "nuxt-facebook-pixel-module",
-      {
-        /* module options */
-        track: "PageView",
-        pixelId: "391749082579870",
-        autoPageView: true,
-        disabled: false
-      }
-    ]
-  ],
+  modules: ["@nuxtjs/sitemap"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
