@@ -258,7 +258,7 @@ export default {
 
   googleAnalytics: {
     // Options
-    id: "UA-46855288-1"
+    id: "G-XEJ31NQ67M"
   },
 
   sitemap: {
