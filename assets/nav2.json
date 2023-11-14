@@ -183,7 +183,7 @@
             "name": "Y.L.P.",
             "description": "Youth Leadership Program",
             "subitems": [],
-            "new": true,
+            "new": false,
             "url": "/all-new-youth-leadership-program/",
             "icon": "graduation-cap-duotone"
           },
