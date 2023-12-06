@@ -2,40 +2,41 @@
   <div class="site-head__topbar text-sm bg-green text-light">
     <div class="wrapper flex justify-between items-center">
       <div class="sm:space-x-4">
-        <a href="tel:905-886-1406" class="inline-flex items-center">
-          <svg-icon
+        <a href="tel:905-886-1406" class="hidden sm:inline-flex items-center"
+          ><svg-icon
             name="icon-phone"
             title="phone icon"
             height="1em"
             width="1em"
             class=""
           />
-          905-886-1406
-        </a>
-        <a href="/dates-and-rates/" class="hidden sm:inline-flex items-center"
+          905-886-1406</a
+        >
+        <a href="/dates-and-rates/" class="hidden lg:inline-flex items-center"
           ><svg-icon
             name="icon-calendar"
             title="calendar icon"
             height="1em"
             width="1em"
             class="hidden sm:inline"
-          />
-          Dates &amp; Rates</a
-        >
-        <a href="/contact/" class="hidden lg:inline-flex items-center"
-          ><svg-icon
+          />Dates &amp; Rates
+        </a>
+        <a href="/contact/" class="inline-flex items-center">
+          <svg-icon
             name="icon-question"
             title="question mark icon"
             width="1em"
             height="1em"
             class="inline"
           />
-          Request Info</a
-        >
+          Request Info
+        </a>
       </div>
 
       <div class="md:space-x-4">
-        <NuxtLink to="/join-our-team/" class="hidden lg:inline-flex items-center"
+        <NuxtLink
+          to="/join-our-team/"
+          class="hidden lg:inline-flex items-center"
           ><svg-icon
             name="icon-user-friends-light"
             title="question mark icon"
@@ -43,7 +44,7 @@
             height="1em"
             class="inline"
           />
-          Join Our Team</NuxtLink
+          Staff</NuxtLink
         >
         <NuxtLink to="/blog/" class="hidden md:inline-block">
           <svg-icon
