@@ -165,6 +165,13 @@
             "new": false,
             "url": "/join-our-team/",
             "icon": "users-duotone"
+          },
+          {
+            "name": "International Staff",
+            "description": "See available positions",
+            "new": false,
+            "url": "/staff/international-staff/",
+            "icon": "globe-americas-duotone"
           }
         ]
       },
