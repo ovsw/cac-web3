@@ -1,6 +1,6 @@
 <template>
   <div class="heroWrapper lg:relative md:pt-24 mb-grd ">
-    <component :is="'style'" v-if="image">
+    <!-- <component :is="'style'" v-if="image">
       .heroImage[data-id="heroImage"] { background-image: url('{{
         $urlFor(image)
           .width(600)
@@ -16,9 +16,24 @@
           .width(1400)
           .height(1200)
       }}')!important; } }
-    </component>
+    </component> -->
 
-    <div class="heroImage relative bg-cover" data-id="heroImage">
+   
+
+    <div class="heroImage relative bg-cover" data-id="heroImage" >
+      <video id="fdae6119-4537-12b6-1194-d9bea39a9b10-video" 
+        autoplay="" 
+        loop="" 
+        style="background-image:url(&quot;/bg-videos/cac-new-intro-2024-2025-thumbnail.jpg&quot;);
+        position: absolute; top: 0; bottom:0; left:0; riht:0;
+        display: block;
+        width: 100%;
+        height: 100%!important;
+        object-fit: cover;
+        " 
+        muted="" 
+        playsinline="" 
+        data-wf-ignore="true" data-object-fit="cover"><source src="/bg-videos/cac-new-intro-2024-2025.mp4" data-wf-ignore="true"><source src="/bg-videos/cac-new-intro-2024-2025.webm" data-wf-ignore="true"></video>
       <div
         class="wrapper  
       sm:px-6 sm:py-6
@@ -33,7 +48,7 @@
         "
         >
           <div
-            class="relative px-4 py-16  bg-light bg-opacity-95
+            class="relative px-4 py-16  bg-light lg:bg-opacity-90 bg-opacity-80
             
               sm:px-6 sm:py-24 md:py-16 
               lg:py-16 lg:px-16 
