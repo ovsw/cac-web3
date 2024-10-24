@@ -91,7 +91,6 @@
                 "
               >
                 <NuxtLink
-                  v-if="buttonUrl"
                   :to="buttonUrl"
                   class="button [ button ] bg-yellow text-dark hover:text-dark-dark mt-4 md:mr-4"
                 >
