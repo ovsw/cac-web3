@@ -90,12 +90,24 @@
                   lg:mx-0 lg:text-left
                 "
               >
-                <NuxtLink
-                  :to="buttonUrl"
+              <!-- hardcoded, instead of 
+                  :to="buttonUrl" 
+                  ||
+                  \/
+               -->
+                <a
+                  :href="buttonUrl"
+                  target="_blank"
                   class="button [ button ] bg-yellow text-dark hover:text-dark-dark mt-4 md:mr-4"
                 >
-                  {{ buttonText }}
-                </NuxtLink>
+                  <!-- {{ buttonText }} -->
+                  <svg-icon
+          name="icon-play"
+          title="play icon"
+          height="2em"
+          width="2em"
+        /> &nbsp; Watch Video
+                </a>
               </div>
               <!-- <div
                 class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5"
@@ -142,7 +154,7 @@ export default {
     },
     buttonUrl: {
       type: String,
-      default: ""
+      default: "https://www.youtube.com/watch?v=bSF5jKJhTvA"
     },
     image: {
       type: Object,
