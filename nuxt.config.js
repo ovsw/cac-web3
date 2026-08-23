@@ -120,7 +120,7 @@ export default {
     "~plugins/image-builder.js",
     "~/plugins/to-link.js",
     "~/plugins/lightbox.client.js",
-    "~/plugins/vue-gtag.js",
+    { src: "~/plugins/vue-gtag.js", mode: "client" },
     { src: "~/plugins/tawk.js", ssr: false }
   ],
 

@@ -1,6 +1,13 @@
 import Vue from 'vue'
 import VueGtag from 'vue-gtag'
 
-Vue.use(VueGtag, {
-  config: { id: 'G-XEJ31NQ67M' }
-})
+export default ({ app }) => {
+  Vue.use(VueGtag, {
+    config: { id: 'G-XEJ31NQ67M' },
+    pageTrackerTemplate: route => ({
+      page_location: window.location.href,
+      page_path: route.fullPath,
+      page_title: document.title
+    })
+  }, app.router)
+}
