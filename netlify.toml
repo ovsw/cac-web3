@@ -1,5 +1,5 @@
 [build]
-  command = "NODE_OPTIONS=--openssl-legacy-provider npm run generate"
+  command = "npm run generate"
   publish = "dist"
 
 [[headers]]
@@ -7,7 +7,7 @@
   for = "/*"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "16"
 
   [headers.values]
     X-Frame-Options = "DENY"
