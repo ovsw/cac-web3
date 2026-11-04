@@ -15,6 +15,14 @@
               alt="Ontario Camp Association Accredited Member Badge"
             />
           </a>
+          <a href="https://www.amicicharity.org/" rel="noopener">
+            <img
+              class="w-32"
+              height="100"
+              src="~/assets/images/logos/amici-camping-charity-logo.png"
+              alt="Amici Camping Charity"
+            />
+          </a>
         </div>
 
         <!-- phone -->
